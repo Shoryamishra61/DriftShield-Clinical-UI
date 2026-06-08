@@ -1,4 +1,15 @@
-# DriftShield: Temporal Clinical Concept Drift Detection via Retrieval-Augmented Hybrid Ensemble Classification
+---
+title: DriftShield Clinical UI
+emoji: 🛡️
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: 4.36.1
+app_file: app.py
+pinned: false
+---
+
+# 🛡️ DriftShield: Medical Concept Drift Detection System via Retrieval-Augmented Hybrid Ensemble Classification
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python">
