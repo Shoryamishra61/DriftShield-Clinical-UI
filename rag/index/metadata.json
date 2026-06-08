@@ -1,0 +1,1018 @@
+[
+  {
+    "text": "Recommendations:\nThe USPSTF recommends that clinicians discuss the potential benefits and harms of initiating low-dose aspirin use for the primary prevention of cardiovascular disease (CVD) in adults aged 40 to 59 years who have a 10% or greater 10-year CVD risk. The decision to initiate low-dose aspirin use should be an individual one, based on clinical judgment and patient preferences. The USPSTF recommends against initiating low-dose aspirin for CVD primary prevention in adults 60 years or older.",
+    "domain": "cardiology",
+    "year": 2022,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_CARD_001",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe evidence indicates that low-dose aspirin reduces the risk of first cardiovascular events (nonfatal myocardial infarction and nonfatal stroke) by approximately 10% to 15%. However, aspirin increases the risk of gastrointestinal bleeding and hemorrhagic stroke. The magnitude of benefit decreases with age while the risk of bleeding increases. The ASPREE trial demonstrated no cardiovascular benefit and increased bleeding in adults 70 and older. For adults aged 40 to 59, net benefit exists only for those with higher baseline CVD risk.",
+    "domain": "cardiology",
+    "year": 2022,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_CARD_001",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nThis recommendation applies to adults aged 40 years or older without known CVD (no prior MI, stroke, or established atherosclerotic disease). It does not apply to adults already taking aspirin for secondary prevention. Adults with bleeding disorders, active peptic ulcer disease, or concurrent anticoagulant use are excluded. Patient preferences and values should guide shared decision-making.",
+    "domain": "cardiology",
+    "year": 2022,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_CARD_001",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nHypertension is now defined as systolic blood pressure (SBP) of 130 mmHg or higher or diastolic blood pressure (DBP) of 80 mmHg or higher. Normal blood pressure is SBP less than 120 mmHg and DBP less than 80 mmHg. Elevated blood pressure is SBP 120-129 and DBP less than 80. Stage 1 hypertension is SBP 130-139 or DBP 80-89. Stage 2 hypertension is SBP 140 or higher or DBP 90 or higher. Adults with Stage 1 hypertension and 10-year ASCVD risk of 10% or higher should receive antihypertensive drug therapy. For adults with lower risk, lifestyle modification is the initial intervention.",
+    "domain": "cardiology",
+    "year": 2017,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_002",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe SPRINT trial demonstrated that targeting SBP of less than 120 mmHg reduced cardiovascular events by 25% and all-cause mortality by 27% compared to a target of less than 140 mmHg, in high-risk adults without diabetes. The lower threshold of 130/80 captures a population at meaningful but previously unrecognized risk. Meta-analyses of 42 clinical trials involving over 144,000 participants support the benefit of treating to lower targets.",
+    "domain": "cardiology",
+    "year": 2017,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_002",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to all adults aged 18 years and older. Special considerations include: community-dwelling ambulatory adults over 65 years should have SBP target less than 130 mmHg; adults with stable ischemic heart disease should target SBP less than 130/80; adults with diabetes should target SBP less than 130/80; adults with CKD should target less than 130/80.",
+    "domain": "cardiology",
+    "year": 2017,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_002",
+    "chunk_index": 2
+  },
+  {
+    "text": "The guideline identifies four primary statin benefit groups: (1) adults with clinical ASCVD, (2) adults with primary elevations of LDL-C 190 mg/dL or higher, (3) adults aged 40-75 with diabetes and LDL-C 70-189 mg/dL, and (4) adults aged 40-75 without diabetes but with LDL-C 70-189 mg/dL and estimated 10-year ASCVD risk of 7.5% or higher. High-intensity statin therapy is recommended for groups 1 and 2. Moderate-intensity statins are recommended for group 3. For group 4, the decision should incorporate risk discussion and risk-enhancing factors including family history, metabolic syndrome, and elevated coronary artery calcium score.",
+    "domain": "cardiology",
+    "year": 2018,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_003",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nPooled analyses from the CTT Collaborators demonstrate that every 1 mmol/L reduction in LDL-C with statin therapy reduces major vascular events by approximately 22%. The transition from treat-to-target LDL goals to risk-based statin intensity was driven by the lack of randomized trial evidence supporting specific LDL targets and the clear evidence supporting statin-intensity-based approaches.",
+    "domain": "cardiology",
+    "year": 2018,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_003",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults aged 20 and older. The Pooled Cohort Equations should be used to estimate 10-year ASCVD risk for primary prevention decisions. Coronary artery calcium (CAC) scoring may be used as a risk enhancer when the risk-based decision is uncertain (borderline risk 5-7.5%). For patients already taking statins, monitoring adherence via LDL-C levels is appropriate.",
+    "domain": "cardiology",
+    "year": 2018,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_003",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor patients with non-valvular atrial fibrillation (AF) and a CHA2DS2-VASc score of 2 or more in men and 3 or more in women, oral anticoagulation is recommended. Direct oral anticoagulants (DOACs) including apixaban, rivaroxaban, edoxaban, and dabigatran are preferred over warfarin for most patients with non-valvular AF due to their favorable benefit-risk profile. Warfarin remains appropriate for patients with mechanical heart valves or moderate-to-severe mitral stenosis. Left atrial appendage occlusion (e.g., Watchman device) may be considered for patients who cannot tolerate long-term anticoagulation.",
+    "domain": "cardiology",
+    "year": 2023,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_004",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nFour landmark randomized trials (RE-LY, ROCKET-AF, ARISTOTLE, ENGAGE AF-TIMI 48) demonstrated non-inferiority or superiority of DOACs compared to warfarin for stroke prevention in AF, with lower rates of intracranial hemorrhage across all DOACs. Apixaban (ARISTOTLE) showed significantly lower major bleeding compared to warfarin. DOACs require no routine INR monitoring and have fewer drug-food interactions.",
+    "domain": "cardiology",
+    "year": 2023,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_004",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adult patients with newly diagnosed or established non-valvular AF. Patients with mechanical heart valves, moderate-to-severe rheumatic mitral stenosis, or severe renal impairment (CrCl <15 mL/min for most DOACs, <25 for dabigatran) should continue warfarin. Dose adjustments for DOACs are required based on renal function, age, and weight.",
+    "domain": "cardiology",
+    "year": 2023,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_004",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nBeta-blocker therapy is recommended during the early phase after myocardial infarction (MI), particularly in patients with reduced left ventricular ejection fraction (LVEF <40%) or heart failure symptoms. However, routine long-term beta-blocker continuation beyond 1 year is no longer strongly recommended for hemodynamically stable post-MI patients with preserved LVEF (>40%) and without heart failure. The decision to continue should be individualized based on clinical factors.",
+    "domain": "cardiology",
+    "year": 2023,
+    "source_name": "ESC",
+    "source_doc_id": "DOC_CARD_005",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe evidence base for indefinite beta-blocker use post-MI derives primarily from pre-reperfusion era trials (Norwegian Timolol Trial, BHAT), conducted before the widespread use of modern therapies including dual antiplatelet agents, statins, ACE inhibitors, and coronary revascularization. Contemporary observational data from the REACH and CHARISMA registries suggest no significant long-term mortality benefit of beta-blockers in stable post-MI patients with preserved ejection fraction receiving modern therapy. The ABYSS and REDUCE-AMI trials provided initial evidence suggesting beta-blocker discontinuation may be safe in this population.",
+    "domain": "cardiology",
+    "year": 2023,
+    "source_name": "ESC",
+    "source_doc_id": "DOC_CARD_005",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adult patients who have survived acute MI. Beta-blocker continuation beyond 1 year is strongly recommended for patients with LVEF <40%, symptomatic heart failure, or ventricular arrhythmias. For stable patients with preserved LVEF on optimal medical therapy, gradual titration and potential discontinuation may be considered.",
+    "domain": "cardiology",
+    "year": 2023,
+    "source_name": "ESC",
+    "source_doc_id": "DOC_CARD_005",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFibrates (gemfibrozil, fenofibrate) are not recommended as a primary pharmacological strategy for cardiovascular disease (CVD) prevention. While fibrates can reduce triglyceride levels, they have not demonstrated consistent cardiovascular mortality benefit in randomized controlled trials. Statins remain the foundational therapy for ASCVD risk reduction. Icosapent ethyl (high-dose EPA) is recommended for adults with triglycerides 135-499 mg/dL on maximally tolerated statin therapy, based on REDUCE-IT trial data showing a 25% reduction in major adverse cardiovascular events.",
+    "domain": "cardiology",
+    "year": 2018,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_006",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe ACCORD-Lipid trial showed no CVD benefit of adding fenofibrate to simvastatin in type 2 diabetes patients. The FIELD trial similarly failed to show significant CVD mortality reduction with fenofibrate. While the Helsinki Heart Study (1987) showed gemfibrozil reduced nonfatal MI, subsequent larger trials failed to confirm CVD mortality benefit. In contrast, the REDUCE-IT trial demonstrated that icosapent ethyl significantly reduced cardiovascular events by 25% in statin-treated patients with elevated triglycerides.",
+    "domain": "cardiology",
+    "year": 2018,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_006",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults requiring triglyceride management. Fibrates may still be used for severe hypertriglyceridemia (>500 mg/dL) to prevent pancreatitis, but should not be prescribed primarily for CVD risk reduction. Gemfibrozil should NOT be combined with statins due to myopathy risk; fenofibrate can be combined with caution.",
+    "domain": "cardiology",
+    "year": 2018,
+    "source_name": "ACC/AHA",
+    "source_doc_id": "DOC_CARD_006",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor patients with metastatic NSCLC and PD-L1 tumor proportion score (TPS) of 50% or greater without EGFR mutations, ALK rearrangements, or other actionable driver alterations, pembrolizumab monotherapy is recommended as first-line treatment. For patients with PD-L1 TPS 1-49%, pembrolizumab in combination with platinum-based chemotherapy is recommended. For squamous NSCLC, pembrolizumab plus carboplatin and paclitaxel/nab-paclitaxel is preferred. All patients should undergo comprehensive molecular profiling including PD-L1, EGFR, ALK, ROS1, BRAF, NTRK, MET, RET, KRAS G12C, and HER2 before initiating systemic therapy.",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_001",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe KEYNOTE-024 trial demonstrated that pembrolizumab monotherapy significantly improved overall survival (OS) compared to platinum-based chemotherapy in patients with PD-L1 TPS >= 50% (median OS 26.3 vs 13.4 months; HR 0.62). The KEYNOTE-042 trial extended the benefit to PD-L1 TPS >= 1%. Five-year follow-up data showed durable responses with pembrolizumab monotherapy (31.9% 5-year OS rate vs 16.3% with chemotherapy).",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_001",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adult patients with newly diagnosed stage IV or recurrent NSCLC. PD-L1 testing by IHC using the 22C3 pharmDx assay is required before treatment decisions. Patients with EGFR, ALK, or other targetable alterations should receive appropriate targeted therapy instead. Performance status ECOG 0-1 is recommended for immunotherapy initiation.",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_001",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor men aged 55 to 69 years, the decision to undergo periodic prostate-specific antigen (PSA)-based screening should be an individual one. The USPSTF recommends against PSA-based screening for prostate cancer in men 70 years and older (Grade D). Before deciding whether to be screened, men aged 55 to 69 should have the opportunity to discuss the potential benefits and harms of screening with their clinician and to incorporate their values and preferences in the decision (Grade C).",
+    "domain": "oncology",
+    "year": 2018,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_002",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe ERSPC trial showed a modest reduction in prostate cancer mortality with PSA screening (20% relative reduction over 16 years), but the PLCO trial showed no mortality benefit. For every 1,000 men screened over 13 years, approximately 1.3 fewer men die from prostate cancer, but 100+ men receive false-positive results, 60+ undergo biopsy, and a significant number experience overdiagnosis of indolent cancers that would never have caused clinical disease. Overtreatment leads to unnecessary prostatectomies and radiation, causing erectile dysfunction, urinary incontinence, and bowel complications.",
+    "domain": "oncology",
+    "year": 2018,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_002",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nThis recommendation applies to asymptomatic men in the general US population without prior diagnosis of prostate cancer. It does not apply to men with symptoms suggestive of prostate cancer (e.g., difficulty urinating, hematuria). African American men and those with a family history of prostate cancer may have higher baseline risk and should be counseled accordingly.",
+    "domain": "oncology",
+    "year": 2018,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_002",
+    "chunk_index": 2
+  },
+  {
+    "text": "NCCN Guidelines Version 2.2023: Genetic/Familial High-Risk Assessment: Breast, Ovarian, and Pancreatic",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_003",
+    "chunk_index": 0
+  },
+  {
+    "text": "Recommendations:\nBRCA1 and BRCA2 genetic testing should be offered to all patients with: (1) breast cancer diagnosed at age 50 or younger, (2) triple-negative breast cancer at any age, (3) epithelial ovarian cancer at any age, (4) pancreatic adenocarcinoma at any age, (5) metastatic or intraductal/cribriform prostate cancer, (6) male breast cancer at any age, (7) two or more primary breast cancers, or (8) Ashkenazi Jewish ancestry with breast/ovarian/pancreatic cancer. Multigene panel testing including BRCA1, BRCA2, PALB2, ATM, CHEK2, RAD51C, RAD51D, TP53, PTEN, CDH1, and STK11 is recommended when clinically appropriate.",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_003",
+    "chunk_index": 1
+  },
+  {
+    "text": "Evidence Summary:\nBRCA1/2 pathogenic variants confer 45-85% lifetime breast cancer risk and 11-39% ovarian cancer risk. BRCA2 mutations are present in 5-10% of pancreatic cancers and 3-5% of metastatic prostate cancers. PARP inhibitors (olaparib, rucaparib, niraparib) have demonstrated clinical benefit across multiple BRCA-associated cancers, making genetic testing therapeutically actionable beyond risk assessment.",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_003",
+    "chunk_index": 2
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults of any sex with personal or family history meeting testing criteria. Cascade testing of first-degree relatives is recommended when a pathogenic variant is identified. Pre-test and post-test genetic counseling should be provided by qualified professionals. Expanded panel testing should be considered when family history suggests hereditary cancer syndrome but does not meet single-gene criteria.",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_003",
+    "chunk_index": 3
+  },
+  {
+    "text": "Recommendations:\nThe USPSTF recommends biennial screening mammography for women beginning at age 40 years and continuing through age 74 years (Grade B). This update lowers the recommended starting age from 50 to 40 for all women of average risk. Biennial screening (every 2 years) is the recommended interval. The USPSTF concludes that current evidence is insufficient to assess the balance of benefits and harms of screening mammography in women 75 years and older, and for the use of supplemental screening with breast ultrasound or MRI in women with dense breasts.",
+    "domain": "oncology",
+    "year": 2024,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_004",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nCISNET collaborative modeling studies demonstrate that biennial screening starting at age 40 provides the best balance of lives saved (40.6% median breast cancer mortality reduction) versus harms (false positives, overdiagnosis). Starting at 40 rather than 50 results in approximately 1.3 additional breast cancer deaths averted per 1,000 women screened over their lifetime. Rising breast cancer incidence among women in their 40s, particularly among Black women who have disproportionately higher mortality rates, supports the earlier starting age.",
+    "domain": "oncology",
+    "year": 2024,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_004",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to cisgender women and all persons assigned female at birth aged 40 years and older who are at average risk for breast cancer. Does not apply to those with a known genetic mutation (BRCA), prior thoracic radiation, or prior breast cancer diagnosis, who should follow high-risk screening protocols.",
+    "domain": "oncology",
+    "year": 2024,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_004",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor patients with unresectable or metastatic melanoma, first-line systemic therapy should consist of immune checkpoint inhibitors. Preferred regimens include: nivolumab plus ipilimumab (anti-PD-1/anti-CTLA-4 combination), nivolumab plus relatlimab (anti-PD-1/anti-LAG-3), or pembrolizumab monotherapy (anti-PD-1). For patients with BRAF V600E/K mutations, combination targeted therapy with BRAF/MEK inhibitors (dabrafenib + trametinib, encorafenib + binimetinib, vemurafenib + cobimetinib) may be considered as an alternative. Cytotoxic chemotherapy (dacarbazine, temozolomide) is no longer recommended as first-line therapy.",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_005",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe CheckMate-067 trial demonstrated 5-year overall survival of 52% with nivolumab + ipilimumab vs 44% with nivolumab alone vs 26% with ipilimumab alone in treatment-naive advanced melanoma. The KEYNOTE-006 trial showed pembrolizumab improved 5-year OS to 38.7% vs 31.0% with ipilimumab. These results represent a dramatic improvement compared to historical chemotherapy outcomes (5-year OS approximately 5-10% with dacarbazine). The RELATIVITY-047 trial showed nivolumab + relatlimab improved progression-free survival over nivolumab alone.",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_005",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adult patients with unresectable stage III or stage IV cutaneous melanoma. BRAF mutation testing should be performed on tumor tissue before treatment selection. Performance status ECOG 0-1 is preferred for combination immunotherapy. Patients with autoimmune conditions or organ transplant recipients require individualized risk-benefit assessment before immunotherapy.",
+    "domain": "oncology",
+    "year": 2023,
+    "source_name": "NCCN",
+    "source_doc_id": "DOC_ONCO_005",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nThe USPSTF recommends annual screening for lung cancer with low-dose computed tomography (LDCT) in adults aged 50 to 80 years who have a 20 pack-year smoking history and currently smoke or have quit within the past 15 years. Screening should be discontinued once a person has not smoked for 15 years or develops a health problem that substantially limits life expectancy or the ability to have curative lung surgery.",
+    "domain": "oncology",
+    "year": 2021,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_006",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe NLST demonstrated that LDCT screening reduced lung cancer mortality by 20% compared to chest radiography in high-risk adults. The NELSON trial confirmed a 24% reduction in lung cancer mortality at 10 years. Expanding eligibility from age 55-80 to 50-80 and from 30 to 20 pack-years increases the number of screen-eligible persons by 6.4 million and improves equity by including populations with historically limited access, particularly Black individuals who develop lung cancer at lower smoking exposures.",
+    "domain": "oncology",
+    "year": 2021,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_006",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults aged 50-80 with 20+ pack-year smoking history who currently smoke or have quit within 15 years. Does not apply to individuals who have never smoked or who quit more than 15 years ago. Shared decision-making should incorporate discussion of benefits (mortality reduction), harms (false positives, overdiagnosis, radiation exposure), and individual patient preferences.",
+    "domain": "oncology",
+    "year": 2021,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_ONCO_006",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nA reasonable HbA1c target for most nonpregnant adults with diabetes is less than 7.0% (53 mmol/mol). Less stringent targets (such as <8.0%) may be appropriate for patients with limited life expectancy, extensive comorbidities, established vascular complications, long-standing diabetes, or substantial hypoglycemia risk. More stringent targets (such as <6.5%) may be considered for select patients with short diabetes duration, type 2 diabetes treated with lifestyle modification or metformin only, long life expectancy, or no significant CVD, if achievable without significant hypoglycemia. Time in Range (TIR) of 70-180 mg/dL for >70% of the time is an alternative metric when CGM data is available.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_001",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe ACCORD trial demonstrated that intensive glycemic targeting to HbA1c <6.0% in high-risk type 2 diabetes patients increased cardiovascular mortality compared to standard targeting. The ADVANCE trial showed reduced nephropathy but no mortality benefit with intensive targeting. The UKPDS long-term follow-up demonstrated a legacy effect of early glycemic control on reduced microvascular and macrovascular outcomes.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_001",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to all adults with type 1 or type 2 diabetes. Pregnant individuals should target HbA1c <6.5% or <6.0% if achievable without significant hypoglycemia. Children and adolescents should target HbA1c <7.0%. Individualization based on patient-specific factors remains paramount.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_001",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor patients with type 2 diabetes and established atherosclerotic cardiovascular disease (ASCVD), heart failure (HF), or chronic kidney disease (CKD), treatment should include an SGLT2 inhibitor or GLP-1 receptor agonist with demonstrated cardiovascular or renal benefit, independent of baseline HbA1c, concurrent glucose-lowering therapy, or individualized HbA1c target. SGLT2 inhibitors with proven benefit include empagliflozin (EMPA-REG OUTCOME), canagliflozin (CANVAS), and dapagliflozin (DAPA-HF, DAPA-CKD). GLP-1 RAs with proven benefit include liraglutide (LEADER), semaglutide (SUSTAIN-6, SELECT), and dulaglutide (REWIND). Metformin remains appropriate as initial therapy for most patients without cardiorenal complications.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_002",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe EMPA-REG OUTCOME trial showed empagliflozin reduced cardiovascular death by 38% and heart failure hospitalization by 35% in patients with T2D and established CVD. The LEADER trial showed liraglutide reduced cardiovascular death by 22%. The DAPA-CKD trial demonstrated dapagliflozin reduced kidney disease progression by 39% in patients with CKD, regardless of diabetes status. The SELECT trial showed semaglutide reduced major adverse cardiovascular events by 20% in patients with obesity and CVD without diabetes.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_002",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults with type 2 diabetes. For patients without ASCVD, HF, or CKD, metformin remains an appropriate first-line agent. Treatment intensification should occur when HbA1c is not at target after 3-6 months on initial therapy. Patient preferences, cost, side effect profile, and comorbidities should guide medication selection.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_002",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nGLP-1 receptor agonists (GLP-1 RAs) are recommended as glucose-lowering agents with cardiovascular benefit for patients with type 2 diabetes and established ASCVD or high cardiovascular risk. Additionally, GLP-1 RAs including semaglutide and liraglutide are recommended for weight management in patients with obesity (BMI >= 30) or overweight (BMI >= 27) with weight-related comorbidities. The SELECT trial established semaglutide for cardiovascular risk reduction in patients with overweight/obesity and established CVD, even without diabetes.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_003",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe LEADER trial demonstrated liraglutide reduced the composite of cardiovascular death, nonfatal MI, and nonfatal stroke by 13% (HR 0.87). The SUSTAIN-6 trial showed semaglutide reduced MACE by 26%. The SELECT trial showed semaglutide 2.4mg weekly reduced MACE by 20% in patients with overweight/obesity and established CVD without diabetes. For weight management, the STEP trials demonstrated semaglutide 2.4mg achieved mean weight loss of 14.9% vs 2.4% with placebo. Tirzepatide (GIP/GLP-1 dual agonist) in the SURMOUNT trials achieved up to 22.5% weight loss.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_003",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults with T2D for glycemic and cardiovascular management, and to adults with obesity/overweight for weight management. Common side effects include nausea, vomiting, and diarrhea, typically transient with dose titration. Contraindicated in patients with personal or family history of medullary thyroid carcinoma or MEN2 syndrome.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_003",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nContinuous glucose monitoring (CGM) is recommended for adults with type 1 diabetes (all insulin delivery methods), adults with type 2 diabetes on intensive insulin therapy (multiple daily injections or insulin pump), and adults with type 2 diabetes on basal insulin who are not meeting glycemic targets or at risk for hypoglycemia. CGM should be used as close to daily as possible for maximum benefit. Time in Range (TIR, 70-180 mg/dL) should be used as a complementary metric alongside HbA1c, with a target of >70% TIR for most adults with diabetes.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_004",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe DIAMOND trial showed real-time CGM reduced HbA1c by 0.6% compared to blood glucose monitoring in adults with T1D on MDI. The FLASH-UK trial demonstrated intermittently scanned CGM (isCGM) reduced HbA1c by 0.5% in T1D and T2D on insulin therapy. Time in Range has been validated as a clinically meaningful outcome, with each 5% increase in TIR associated with clinically significant benefits for microvascular complications.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_004",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nRecommended for all individuals with T1D regardless of insulin delivery method. For T2D, CGM is recommended for those on multiple daily injections, insulin pump therapy, or basal insulin with hypoglycemia risk. Individuals should receive training on CGM interpretation and glucose pattern management.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_004",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nScreen for gestational diabetes mellitus (GDM) at 24-28 weeks of gestation in pregnant individuals not previously known to have diabetes. Either the one-step approach (75g OGTT with IADPSG criteria) or the two-step approach (50g GCT followed by 100g OGTT if screen-positive) may be used. The one-step approach uses lower glucose thresholds (fasting >= 92 mg/dL, 1-hour >= 180 mg/dL, 2-hour >= 153 mg/dL) and diagnoses GDM if one or more values are met. Early screening (first trimester) should be performed in individuals with risk factors for undiagnosed type 2 diabetes.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_005",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe HAPO study demonstrated a continuous relationship between maternal glucose and adverse pregnancy outcomes, supporting lower diagnostic thresholds. The IADPSG criteria (one-step approach) identify more women with GDM (approximately 15-20% of pregnancies vs 5-9% with two-step) but may lead to more interventions with uncertain long-term benefit. ACOG continues to support the two-step approach for most populations due to cost-effectiveness concerns.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_005",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to all pregnant individuals at 24-28 weeks of gestation. Early screening is recommended for individuals with BMI >= 25, previous GDM, family history of T2D, polycystic ovary syndrome, or belonging to high-risk ethnic groups. Postpartum testing for persistent diabetes should be performed at 4-12 weeks after delivery.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ADA",
+    "source_doc_id": "DOC_DIAB_005",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nMetabolic surgery should be recommended as an option for adults with type 2 diabetes and BMI >= 30.0 kg/m2 (or >= 27.5 kg/m2 for Asian Americans) when hyperglycemia is inadequately controlled by lifestyle and optimal medical therapy. For adults with T2D and BMI >= 35.0, metabolic surgery should be strongly recommended. Available procedures include Roux-en-Y gastric bypass (RYGB), sleeve gastrectomy (SG), and one-anastomosis gastric bypass (OAGB). Metabolic surgery achieves sustained diabetes remission in 30-60% of patients at 5 years.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ASMBS",
+    "source_doc_id": "DOC_DIAB_006",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe STAMPEDE trial (5-year follow-up) showed metabolic surgery achieved HbA1c <= 6.0% in 29% (RYGB) and 23% (SG) of patients vs 5% with medical therapy alone. The Swedish Obese Subjects study demonstrated sustained weight loss and reduced diabetes incidence over 20 years. Meta-analyses show metabolic surgery reduces cardiovascular events by 40-50% and all-cause mortality by 30-40% compared to non-surgical management in patients with T2D and obesity.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ASMBS",
+    "source_doc_id": "DOC_DIAB_006",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults aged 18-65 with T2D and BMI >= 30 (>= 27.5 for Asian Americans). Patients should have attempted lifestyle modification and medical therapy. Comprehensive preoperative evaluation should include psychological assessment, nutritional counseling, and evaluation for surgical risk. Lifelong nutritional supplementation and monitoring are required postoperatively.",
+    "domain": "diabetes",
+    "year": 2024,
+    "source_name": "ASMBS",
+    "source_doc_id": "DOC_DIAB_006",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nIntravenous alteplase (IV tPA) is recommended for eligible patients within 4.5 hours of symptom onset (or last known well). The standard dose is 0.9 mg/kg (max 90 mg), with 10% given as an IV bolus and the remainder infused over 60 minutes. For patients last known well 4.5-9 hours ago or with wake-up stroke, IV alteplase may be considered if perfusion imaging shows salvageable tissue (DWI-FLAIR mismatch on MRI). Tenecteplase 0.25 mg/kg (max 25 mg) IV bolus may be considered as an alternative to alteplase for patients eligible for mechanical thrombectomy.",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_001",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe NINDS rt-PA trial established the 3-hour window in 1995. The ECASS III trial extended the window to 4.5 hours, showing a 7.2% absolute increase in favorable outcomes (modified Rankin Scale 0-1) with alteplase vs placebo. The EXTEND and WAKE-UP trials demonstrated benefit of alteplase in extended time windows when guided by perfusion or DWI-FLAIR mismatch imaging.",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_001",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adult patients with acute ischemic stroke. Contraindications include: active internal bleeding, platelet count <100,000, INR >1.7, recent major surgery (<14 days), prior intracranial hemorrhage, and uncontrolled hypertension (>185/110 after treatment). Blood glucose should be corrected before treatment (hypoglycemia can mimic stroke).",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_001",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nMechanical thrombectomy with a stent retriever or direct aspiration is recommended for patients with acute ischemic stroke due to large vessel occlusion (LVO) of the internal carotid artery or middle cerebral artery M1 segment, presenting within 6 hours of symptom onset, with NIHSS >= 6 and ASPECTS >= 6. For patients presenting 6-24 hours from last known well, mechanical thrombectomy is recommended for those who meet DAWN or DEFUSE-3 eligibility criteria based on perfusion imaging showing large penumbra with small infarct core.",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_002",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nFive landmark RCTs in 2015 (MR CLEAN, ESCAPE, EXTEND-IA, SWIFT PRIME, REVASCAT) established thrombectomy benefit within 6 hours (NNT approximately 3-5 for functional independence). The DAWN trial (6-24 hours) showed 73% achieved functional independence with thrombectomy vs 15% with medical therapy alone. The DEFUSE-3 trial (6-16 hours) confirmed benefit in patients with target mismatch profile. Combined, these trials showed a 27-73% absolute benefit in achieving functional independence.",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_002",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adult patients with acute ischemic stroke due to proximal anterior circulation LVO. Patient selection for the 6-24 hour window requires advanced perfusion imaging (CT perfusion or MRI DWI-perfusion). Patients should have prestroke functional independence (mRS 0-1). Transfer protocols should be established for patients at non-thrombectomy-capable centers.",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_002",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nAspirin should NOT be administered within 24 hours of IV alteplase. Antithrombotic therapy (aspirin 325 mg initially, followed by aspirin 81 mg daily or clopidogrel 75 mg daily for secondary prevention) should be initiated only after a follow-up CT scan at 24 hours confirms no hemorrhagic transformation. For patients not receiving alteplase, aspirin 160-325 mg should be administered within 24-48 hours of stroke onset.",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_003",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe IST and CAST mega-trials established the benefit of early aspirin (within 48 hours) after ischemic stroke, showing a modest but significant reduction in recurrent stroke and death. However, combining aspirin with alteplase within 24 hours increases the risk of symptomatic intracranial hemorrhage (sICH). The NINDS and ECASS III protocols mandated a 24-hour aspirin hold after tPA, which has been confirmed as best practice.",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_003",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to all patients receiving IV alteplase for acute ischemic stroke. After 24 hours, a non-contrast CT head should be performed. If no hemorrhage is present, antiplatelet therapy should be initiated. For minor stroke or TIA, dual antiplatelet therapy (aspirin + clopidogrel) for 21 days may be considered (CHANCE, POINT trials).",
+    "domain": "neurology",
+    "year": 2019,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_003",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nCarotid endarterectomy (CEA) is recommended for patients with symptomatic carotid stenosis of 70-99% (by NASCET criteria) when perioperative morbidity/mortality risk is less than 6%. For symptomatic stenosis of 50-69%, the benefit of CEA is less certain and depends on patient-specific factors including age, sex, comorbidities, and perioperative risk. CEA or carotid artery stenting (CAS) may be considered for asymptomatic stenosis of 70-99% in patients with high stroke risk features, but the role of revascularization for asymptomatic disease is increasingly questioned given advances in best medical therapy.",
+    "domain": "neurology",
+    "year": 2021,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_004",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe NASCET and ECST trials established CEA benefit for symptomatic stenosis 50-99%, with greatest benefit for 70-99% stenosis (NNT 6 over 2 years). For 50-69%, the NNT was 22 over 5 years. The CREST trial showed equivalent outcomes for CEA and CAS in younger patients. The ACST-2 trial (2021) showed no significant difference between CAS and CEA for asymptomatic stenosis. Intensive medical therapy (high-dose statins, antiplatelet agents, blood pressure control) has significantly reduced stroke risk in asymptomatic stenosis.",
+    "domain": "neurology",
+    "year": 2021,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_004",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults with extracranial internal carotid artery stenosis. CEA is preferred for patients over 70 years (lower periprocedural risk vs CAS). CAS may be preferred for patients with hostile neck anatomy, prior neck radiation, or high surgical risk. Asymptomatic patients should receive intensive medical management regardless of revascularization decision.",
+    "domain": "neurology",
+    "year": 2021,
+    "source_name": "AHA/ASA",
+    "source_doc_id": "DOC_NEUR_004",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor patients with atrial fibrillation and ischemic stroke, the timing of oral anticoagulation initiation should be guided by stroke severity and neuroimaging: Minor stroke (NIHSS <8, small infarct): Start DOAC at 1-3 days; Moderate stroke (NIHSS 8-15, moderate infarct): Start DOAC at 3-5 days; Severe stroke (NIHSS >15, large infarct): Start DOAC at 7-14 days; Hemorrhagic transformation present: Delay anticoagulation and repeat imaging. DOACs are preferred over warfarin for secondary stroke prevention in non-valvular AF.",
+    "domain": "neurology",
+    "year": 2022,
+    "source_name": "ESO",
+    "source_doc_id": "DOC_NEUR_005",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nObservational studies and meta-analyses suggest that early DOAC initiation (within 1-5 days) is safe and effective for minor-to-moderate cardioembolic strokes. The ELAN trial (2023) demonstrated that early anticoagulation (within 48 hours for minor, within 6-7 days for moderate-severe strokes) with DOACs was non-inferior to delayed initiation. Hemorrhagic transformation risk increases with early anticoagulation in large infarcts.",
+    "domain": "neurology",
+    "year": 2022,
+    "source_name": "ESO",
+    "source_doc_id": "DOC_NEUR_005",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adult patients with acute ischemic stroke and non-valvular atrial fibrillation. Patients with mechanical heart valves should receive heparin bridging to warfarin. Patients with large territorial infarcts or hemorrhagic transformation on follow-up imaging should have anticoagulation delayed until repeat imaging shows stability.",
+    "domain": "neurology",
+    "year": 2022,
+    "source_name": "ESO",
+    "source_doc_id": "DOC_NEUR_005",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nClinicians should NOT prescribe antibiotics for patients with acute uncomplicated bronchitis, regardless of duration of cough. Antibiotics do not significantly improve outcomes in acute bronchitis and contribute to antibiotic resistance. Patients should be educated that acute bronchitis is predominantly viral (90-95% of cases) and typically self-resolves within 1-3 weeks. Symptomatic management with cough suppressants, non-steroidal anti-inflammatory drugs, and adequate hydration is recommended. Green or yellow sputum color is NOT an indicator of bacterial infection.",
+    "domain": "infectious disease",
+    "year": 2016,
+    "source_name": "ACP/CDC",
+    "source_doc_id": "DOC_INFE_001",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nA Cochrane review of 17 RCTs involving 3,936 participants found that antibiotics did not significantly reduce duration of cough (mean reduction 0.46 days) or clinical improvement in acute bronchitis. Side effects of antibiotics including nausea, rash, and diarrhea were significantly more common. Approximately 50% of antibiotic prescriptions for respiratory infections are considered unnecessary. Antibiotic-resistant infections cause at least 2 million illnesses and 23,000 deaths annually in the US.",
+    "domain": "infectious disease",
+    "year": 2016,
+    "source_name": "ACP/CDC",
+    "source_doc_id": "DOC_INFE_001",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to immunocompetent adults and children with acute uncomplicated bronchitis. Does not apply to patients with COPD exacerbation, pneumonia, pertussis, or other confirmed bacterial respiratory infections. Patients with fever above 38.5C persisting beyond 5 days, dyspnea, or tachypnea should be evaluated for pneumonia with chest radiograph.",
+    "domain": "infectious disease",
+    "year": 2016,
+    "source_name": "ACP/CDC",
+    "source_doc_id": "DOC_INFE_001",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nDiagnosis of acute bacterial rhinosinusitis (ABRS) requires either: (1) persistent symptoms lasting 10 or more days without improvement, (2) severe symptoms (high fever >= 39C with purulent nasal discharge) for 3-4 consecutive days, or (3) worsening symptoms after initial improvement (double sickening). For mild-moderate ABRS in immunocompetent adults, watchful waiting without antibiotics for 7 days is an option if follow-up is ensured. If antibiotics are indicated, amoxicillin-clavulanate is the recommended first-line agent (not amoxicillin alone due to increasing beta-lactamase-producing H. influenzae). Treatment duration is 5-7 days for adults.",
+    "domain": "infectious disease",
+    "year": 2012,
+    "source_name": "IDSA",
+    "source_doc_id": "DOC_INFE_002",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nSystematic reviews show that approximately 65-80% of acute sinusitis episodes resolve spontaneously without antibiotics. Antibiotic treatment provides modest symptomatic benefit (NNT ~15) with a small but real risk of side effects. The shift from amoxicillin to amoxicillin-clavulanate reflects increasing amoxicillin resistance among H. influenzae and M. catarrhalis isolates.",
+    "domain": "infectious disease",
+    "year": 2012,
+    "source_name": "IDSA",
+    "source_doc_id": "DOC_INFE_002",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to immunocompetent adults and children with clinical features of acute sinusitis. Imaging (CT sinus) is NOT recommended for uncomplicated acute sinusitis. Patients with severe symptoms, immunocompromised status, or complications (orbital cellulitis, intracranial extension) should receive immediate antibiotic therapy and possible urgent imaging.",
+    "domain": "infectious disease",
+    "year": 2012,
+    "source_name": "IDSA",
+    "source_doc_id": "DOC_INFE_002",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nPrEP should be prescribed for adults and adolescents (weight >= 35 kg) who are at substantial risk of HIV acquisition. Clinicians should inform all sexually active adults and adolescents about PrEP. Risk groups include: MSM, heterosexual men and women with HIV-positive or unknown-status partners, people who inject drugs (PWID), transgender individuals, and individuals with recent STI diagnosis. FDA-approved PrEP options include: oral tenofovir disoproxil fumarate-emtricitabine (TDF/FTC) daily, oral tenofovir alafenamide-emtricitabine (TAF/FTC) daily, and injectable cabotegravir (CAB-LA) every 2 months.",
+    "domain": "infectious disease",
+    "year": 2021,
+    "source_name": "CDC",
+    "source_doc_id": "DOC_INFE_003",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe iPrEx trial showed oral TDF/FTC reduced HIV acquisition by 44% overall and 92% with high adherence in MSM/transgender women. The Partners PrEP trial demonstrated 75% reduction in HIV acquisition among serodiscordant heterosexual couples. The HPTN 083 and 084 trials showed injectable cabotegravir was superior to daily oral TDF/FTC in MSM/transgender women and cisgender women, respectively. Event-driven PrEP (2-1-1 dosing) showed 86% risk reduction in the IPERGAY trial.",
+    "domain": "infectious disease",
+    "year": 2021,
+    "source_name": "CDC",
+    "source_doc_id": "DOC_INFE_003",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to HIV-negative individuals at substantial risk of HIV acquisition. HIV testing (antigen/antibody test) must be performed before initiation and every 3 months during PrEP use. Renal function should be monitored. PrEP is safe during pregnancy and breastfeeding (TDF/FTC). Oral PrEP should be taken consistently; adherence counseling is essential.",
+    "domain": "infectious disease",
+    "year": 2021,
+    "source_name": "CDC",
+    "source_doc_id": "DOC_INFE_003",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nThe FDA has cleared and the CDC endorses the use of modified two-tier testing (MTTT) for Lyme disease diagnosis. MTTT replaces the traditional Western blot confirmatory step with a second enzyme immunoassay (EIA) using a different antigen preparation. Either standard two-tier testing (STT: first EIA + Western blot) or modified two-tier testing (MTTT: first EIA + second different EIA) are acceptable. MTTT offers advantages of faster turnaround, objective interpretation, and improved sensitivity in early Lyme disease.",
+    "domain": "infectious disease",
+    "year": 2019,
+    "source_name": "CDC",
+    "source_doc_id": "DOC_INFE_004",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nMulti-site validation studies demonstrated that MTTT has higher sensitivity than STT in early Lyme disease (64% vs 48% for acute specimens) while maintaining comparable specificity (>99.5%). The MTTT approach eliminates subjective Western blot band interpretation and reduces turnaround time from days to hours. Both approaches perform similarly in later stages of Lyme disease.",
+    "domain": "infectious disease",
+    "year": 2019,
+    "source_name": "CDC",
+    "source_doc_id": "DOC_INFE_004",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to patients with suspected Lyme disease based on clinical presentation and epidemiologic risk. Testing should not be performed in individuals with low pre-test probability. Patients with erythema migrans (classic bull's-eye rash) can be diagnosed clinically without serologic confirmation. Serologic testing is most useful for patients with later manifestations (arthritis, neurologic, cardiac).",
+    "domain": "infectious disease",
+    "year": 2019,
+    "source_name": "CDC",
+    "source_doc_id": "DOC_INFE_004",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor nonhospitalized adults with mild-to-moderate COVID-19 who are at high risk of disease progression, nirmatrelvir/ritonavir (Paxlovid) is recommended as first-line therapy, initiated within 5 days of symptom onset. Alternative options include remdesivir (3-day IV regimen) for patients who cannot take Paxlovid. Molnupiravir may be considered when Paxlovid and remdesivir are not available or appropriate. Monoclonal antibodies are no longer recommended due to the evolution of SARS-CoV-2 variants. Convalescent plasma is not recommended for immunocompetent patients.",
+    "domain": "infectious disease",
+    "year": 2023,
+    "source_name": "NIH",
+    "source_doc_id": "DOC_INFE_005",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe EPIC-HR trial showed nirmatrelvir/ritonavir reduced hospitalization or death by 89% in unvaccinated high-risk adults with COVID-19. Real-world effectiveness studies confirm significant reductions in hospitalization and mortality across vaccinated and unvaccinated populations. The MOVe-OUT trial showed molnupiravir reduced hospitalization by 30%. Remdesivir (PINETREE trial) reduced hospitalization by 87% in high-risk outpatients.",
+    "domain": "infectious disease",
+    "year": 2023,
+    "source_name": "NIH",
+    "source_doc_id": "DOC_INFE_005",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults with confirmed SARS-CoV-2 infection, mild-to-moderate symptoms, and high risk of progression (age >= 65, obesity, diabetes, immunosuppression, chronic lung/kidney/liver disease). Paxlovid has significant drug-drug interactions (ritonavir is a strong CYP3A inhibitor). Nirmatrelvir dose adjustment is required for moderate renal impairment (eGFR 30-59). Not recommended for severe renal impairment.",
+    "domain": "infectious disease",
+    "year": 2023,
+    "source_name": "NIH",
+    "source_doc_id": "DOC_INFE_005",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor children aged 6 months to 2 years with unilateral AOM without severe signs (otalgia < 48 hours, temperature < 39C), observation without antibiotics may be offered if close follow-up can be ensured. For children 2 years and older with unilateral or bilateral AOM without severe signs, observation with a safety-net prescription (filled only if symptoms worsen or do not improve in 48-72 hours) is recommended. When antibiotics are indicated, high-dose amoxicillin (80-90 mg/kg/day) is first-line. Amoxicillin-clavulanate is recommended for treatment failure or recent antibiotic use.",
+    "domain": "infectious disease",
+    "year": 2023,
+    "source_name": "AAP",
+    "source_doc_id": "DOC_INFE_006",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe AAFP/AAP 2013 guideline incorporated evidence from RCTs showing that 80% of AOM episodes in children resolve spontaneously without antibiotics. The NNT for antibiotics in AOM is approximately 14-20 (1 child benefits for every 14-20 treated). Observation reduces antibiotic exposure by 27-56% without increasing complications. Tympanic membrane perforation and mastoiditis are rare regardless of treatment approach.",
+    "domain": "infectious disease",
+    "year": 2023,
+    "source_name": "AAP",
+    "source_doc_id": "DOC_INFE_006",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to children aged 6 months through 12 years with AOM. Observation is not appropriate for: children under 6 months, bilateral AOM in children under 2 years, severe symptoms (moderate-severe otalgia, otalgia >= 48 hours, temperature >= 39C), immunocompromised children, or children with craniofacial abnormalities.",
+    "domain": "infectious disease",
+    "year": 2023,
+    "source_name": "AAP",
+    "source_doc_id": "DOC_INFE_006",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor COPD patients receiving supplemental oxygen therapy, the target oxygen saturation should be 88-92%, NOT 95-100%. High-flow oxygen administration targeting higher saturations can suppress hypoxic respiratory drive in COPD patients, leading to hypercapnia, respiratory acidosis, and potentially fatal respiratory failure. Oxygen should be prescribed at the minimum flow rate necessary to maintain SpO2 88-92%. Venturi masks with fixed FiO2 delivery are preferred over simple nasal cannulae for acute exacerbations.",
+    "domain": "pulmonology",
+    "year": 2024,
+    "source_name": "GOLD",
+    "source_doc_id": "DOC_PULM_001",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe landmark Austin et al. (2010) randomized controlled trial demonstrated that titrated oxygen therapy (SpO2 88-92%) reduced mortality by 78% compared to high-flow oxygen (8-10 L/min) in COPD patients with acute exacerbations during prehospital transport. The DECAF score validation studies confirmed that uncontrolled oxygen therapy is an independent predictor of adverse outcomes in COPD exacerbations.",
+    "domain": "pulmonology",
+    "year": 2024,
+    "source_name": "GOLD",
+    "source_doc_id": "DOC_PULM_001",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to all patients with known or suspected COPD receiving supplemental oxygen, both in acute care and long-term home oxygen settings. Patients with COPD and type 2 respiratory failure (hypercapnia with PaCO2 >45 mmHg) are at highest risk. ABG analysis should guide oxygen titration. Long-term oxygen therapy (LTOT) is indicated for patients with resting PaO2 <= 55 mmHg or SpO2 <= 88%.",
+    "domain": "pulmonology",
+    "year": 2024,
+    "source_name": "GOLD",
+    "source_doc_id": "DOC_PULM_001",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor symptomatic patients (mMRC >= 2 or CAT >= 10) without frequent exacerbations (Group B per GOLD 2023 ABE classification), initial treatment should be a LABA/LAMA combination bronchodilator. For patients with frequent exacerbations (Group E: >= 2 moderate or >= 1 leading to hospitalization), LABA/LAMA is also the preferred initial therapy. ICS-containing regimens (LABA/LAMA/ICS triple therapy) should be considered for Group E patients with blood eosinophils >= 300 cells/uL. ICS should NOT be used as first-line maintenance monotherapy for COPD. ICS monotherapy is inappropriate and may increase pneumonia risk.",
+    "domain": "pulmonology",
+    "year": 2024,
+    "source_name": "GOLD",
+    "source_doc_id": "DOC_PULM_002",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe FLAME trial showed LABA/LAMA (indacaterol/glycopyrronium) was superior to LABA/ICS (salmeterol/fluticasone) in preventing COPD exacerbations. The IMPACT and ETHOS trials demonstrated triple therapy (LABA/LAMA/ICS) reduced exacerbations and mortality compared to dual bronchodilator therapy in patients with elevated blood eosinophils. The WISDOM trial showed ICS withdrawal in COPD patients on triple therapy did not increase exacerbation risk in those with low eosinophils (<150 cells/uL).",
+    "domain": "pulmonology",
+    "year": 2024,
+    "source_name": "GOLD",
+    "source_doc_id": "DOC_PULM_002",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults with confirmed COPD (post-bronchodilator FEV1/FVC < 0.70). Blood eosinophil count should guide ICS use: >= 300 cells/uL favors ICS; < 100 cells/uL suggests no ICS benefit and increased pneumonia risk. Short-acting bronchodilators (SABA or SAMA) should be available for rescue use in all patients.",
+    "domain": "pulmonology",
+    "year": 2024,
+    "source_name": "GOLD",
+    "source_doc_id": "DOC_PULM_002",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nGINA 2023 fundamentally changes the approach to asthma reliever therapy. SABA-only treatment (without concomitant ICS) is NO LONGER recommended at any step of asthma management due to the risk of severe exacerbations and asthma death with over-reliance on SABA alone. Track 1 (preferred): As-needed low-dose ICS-formoterol (e.g., budesonide-formoterol) is used as both reliever AND controller at all steps. Track 2: As-needed SABA is used WITH as-needed ICS at Step 1-2, and with regular ICS controller at Steps 3-5. For moderate-severe asthma (Steps 3-5), add-on therapies include LAMA (tiotropium), leukotriene receptor antagonists, or biologic therapies (anti-IgE, anti-IL5/IL5R, anti-IL4R, anti-TSLP).",
+    "domain": "pulmonology",
+    "year": 2023,
+    "source_name": "GINA",
+    "source_doc_id": "DOC_PULM_003",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe SYGMA 1 and SYGMA 2 trials demonstrated that as-needed budesonide-formoterol was non-inferior to maintenance budesonide for severe exacerbation prevention in mild asthma, with significantly lower ICS exposure. The Novel START trial confirmed that as-needed budesonide-formoterol reduced severe exacerbations by 51% compared to as-needed SABA alone in mild asthma. Epidemiological data show that dispensing 3 or more SABA canisters per year is associated with increased exacerbation risk and asthma mortality.",
+    "domain": "pulmonology",
+    "year": 2023,
+    "source_name": "GINA",
+    "source_doc_id": "DOC_PULM_003",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults and adolescents (>= 12 years) with asthma at all severity levels. Treatment should be stepped up or down based on symptom control and exacerbation risk, assessed at regular intervals (1-3 months). Inhaler technique and adherence should be checked before stepping up therapy. Exercise-induced bronchoconstriction may be managed with pre-exercise ICS-formoterol.",
+    "domain": "pulmonology",
+    "year": 2023,
+    "source_name": "GINA",
+    "source_doc_id": "DOC_PULM_003",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nAll antidepressant medications carry a boxed warning regarding increased risk of suicidal thinking and behavior (suicidality) in children, adolescents, and young adults (aged 18-24) during initial treatment (generally the first 1-2 months). Close monitoring is recommended for all patients starting antidepressant therapy, with particular vigilance for clinical worsening, suicidality, and unusual changes in behavior. Patients and caregivers should be advised to report any concerning symptoms immediately. The warning applies to all classes of antidepressants: SSRIs, SNRIs, TCAs, MAOIs, and atypicals.",
+    "domain": "psychiatry",
+    "year": 2007,
+    "source_name": "FDA",
+    "source_doc_id": "DOC_PSYC_001",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nPooled analysis of 372 placebo-controlled trials involving 99,839 patients showed a small but statistically significant increase in suicidality risk in patients under 25 (OR 1.62 for ages 18-24). No completed suicides occurred in the clinical trials. For adults aged 25-64, no increased risk was observed. For adults 65 and older, antidepressants were associated with reduced suicidality risk. The absolute risk increase in young adults is small (approximately 1-2 additional cases per 1,000 patients treated).",
+    "domain": "psychiatry",
+    "year": 2007,
+    "source_name": "FDA",
+    "source_doc_id": "DOC_PSYC_001",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nThe boxed warning applies to all patients under age 25 initiating antidepressant therapy. It does NOT contraindicate antidepressant use - depression itself carries substantial suicide risk, and the benefits of treatment generally outweigh risks. Monitoring should include weekly face-to-face visits for the first 4 weeks, then biweekly for 4 weeks, then at 12 weeks. Abrupt discontinuation should be avoided.",
+    "domain": "psychiatry",
+    "year": 2007,
+    "source_name": "FDA",
+    "source_doc_id": "DOC_PSYC_001",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nAntipsychotic medications should NOT be used as first-line treatment for behavioral and psychological symptoms of dementia (BPSD). Non-pharmacological interventions should be attempted first, including: environmental modifications, caregiver education, structured activities, music therapy, and validation therapy. If non-pharmacological approaches are insufficient, antipsychotics may be used at the lowest effective dose for the shortest possible duration, with informed consent and regular reassessment. Haloperidol, risperidone, olanzapine, quetiapine, and aripiprazole have some evidence for specific BPSD symptoms.",
+    "domain": "psychiatry",
+    "year": 2016,
+    "source_name": "APA",
+    "source_doc_id": "DOC_PSYC_002",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe FDA 2005 boxed warning (extended to all antipsychotics in 2008) was based on meta-analyses showing a 1.6-1.7 fold increase in all-cause mortality in elderly dementia patients receiving atypical antipsychotics compared to placebo (4.5% vs 2.6% over 10-12 weeks). Causes of death included cardiovascular events and infections (pneumonia). The CATIE-AD trial showed modest but significant improvement in Clinical Global Impression scores with antipsychotics, offset by significant metabolic and extrapyramidal side effects.",
+    "domain": "psychiatry",
+    "year": 2016,
+    "source_name": "APA",
+    "source_doc_id": "DOC_PSYC_002",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to elderly patients with dementia-related behavioral symptoms. Antipsychotics are NOT FDA-approved for BPSD and their use is off-label. Patients should be assessed for underlying causes of behavioral changes (pain, infection, constipation, delirium) before considering pharmacotherapy. Regular reassessment with dose reduction or discontinuation attempts should occur at least every 3 months.",
+    "domain": "psychiatry",
+    "year": 2016,
+    "source_name": "APA",
+    "source_doc_id": "DOC_PSYC_002",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nAll benzodiazepines (short-, intermediate-, and long-acting) are listed as potentially inappropriate medications for adults aged 65 and older. They should be avoided for treatment of insomnia, agitation, or delirium. Benzodiazepines increase the risk of cognitive impairment, delirium, falls, fractures, and motor vehicle accidents in older adults. When discontinuation is pursued, gradual dose tapering (10-25% reduction every 1-2 weeks) is recommended to prevent withdrawal symptoms. Alternative treatments for insomnia include CBT-I (cognitive behavioral therapy for insomnia), sleep hygiene education, melatonin receptor agonists, and low-dose trazodone.",
+    "domain": "psychiatry",
+    "year": 2023,
+    "source_name": "AGS",
+    "source_doc_id": "DOC_PSYC_003",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nMeta-analyses demonstrate that benzodiazepine use in older adults is associated with a 50% increase in falls risk, 60% increase in hip fracture risk, and 50-80% increase in delirium risk. The CASCADE study showed long-term benzodiazepine use was associated with a 51% increased risk of dementia. Deprescribing studies demonstrate successful benzodiazepine discontinuation in 40-80% of elderly patients using gradual tapering protocols.",
+    "domain": "psychiatry",
+    "year": 2023,
+    "source_name": "AGS",
+    "source_doc_id": "DOC_PSYC_003",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to community-dwelling and institutionalized adults aged 65 years and older. Exceptions may include seizure disorders, benzodiazepine withdrawal management, severe generalized anxiety disorder unresponsive to other treatments, and periprocedural anesthesia. Any continued use should involve the lowest effective dose for the shortest possible duration.",
+    "domain": "psychiatry",
+    "year": 2023,
+    "source_name": "AGS",
+    "source_doc_id": "DOC_PSYC_003",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor patients on lithium therapy, comprehensive monitoring should include: serum lithium level every 3-6 months (target 0.6-0.8 mEq/L for maintenance, 0.8-1.0 for acute mania); renal function (eGFR and creatinine) every 6 months; thyroid function tests (TSH, free T4) every 6-12 months; serum calcium and parathyroid hormone annually; body weight and BMI at each visit; ECG at baseline and annually for patients with cardiovascular risk factors. Lithium should be prescribed by, or in consultation with, a psychiatrist with experience in managing bipolar disorder.",
+    "domain": "psychiatry",
+    "year": 2023,
+    "source_name": "NICE",
+    "source_doc_id": "DOC_PSYC_004",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nLithium nephrotoxicity occurs in 10-20% of long-term users, manifesting as nephrogenic diabetes insipidus, reduced renal concentrating ability, and chronic tubulointerstitial nephropathy. Hypothyroidism occurs in 5-35% of lithium users (more common in women). Hyperparathyroidism with hypercalcemia occurs in 10-42% of long-term users. Early detection through regular monitoring allows dose adjustment or medication change before irreversible organ damage occurs.",
+    "domain": "psychiatry",
+    "year": 2023,
+    "source_name": "NICE",
+    "source_doc_id": "DOC_PSYC_004",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to all patients receiving lithium therapy for bipolar disorder, schizoaffective disorder, or augmentation of antidepressant therapy. Patients with pre-existing renal or thyroid disease require more frequent monitoring. Lithium has a narrow therapeutic index (therapeutic range 0.6-1.2 mEq/L; toxicity typically above 1.5 mEq/L). Patients should maintain adequate hydration and be counseled about interactions with NSAIDs, ACE inhibitors, and diuretics.",
+    "domain": "psychiatry",
+    "year": 2023,
+    "source_name": "NICE",
+    "source_doc_id": "DOC_PSYC_004",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nThe USPSTF recommends screening for colorectal cancer in all adults aged 45 to 75 years (Grade A for 50-75, Grade B for 45-49). This recommendation lowers the starting age from 50 to 45. Acceptable screening strategies include: stool-based tests (FIT annually, FIT-DNA every 1-3 years), direct visualization (colonoscopy every 10 years, CT colonography every 5 years, flexible sigmoidoscopy every 5 years, or flexible sigmoidoscopy every 10 years + annual FIT). The decision to screen adults aged 76-85 should be individualized. Screening is NOT recommended for adults over 85 years.",
+    "domain": "gastroenterology",
+    "year": 2021,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_GAST_001",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nColorectal cancer incidence has been rising in adults under 50 at a rate of approximately 1-2% per year since the 1990s. Modeling studies (CISNET) demonstrate that starting screening at 45 versus 50 results in 22-27 additional life-years gained per 1,000 persons screened. The ACS lowered the recommended starting age to 45 in 2018 based on similar data. FIT is the recommended stool-based test due to superior sensitivity (74%) compared to guaiac FOBT (62%).",
+    "domain": "gastroenterology",
+    "year": 2021,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_GAST_001",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to asymptomatic average-risk adults. High-risk individuals (inflammatory bowel disease, family history of CRC or advanced adenomas, hereditary syndromes like Lynch or FAP) should follow specialized surveillance protocols beginning earlier. All positive non-colonoscopy screening tests require colonoscopy follow-up.",
+    "domain": "gastroenterology",
+    "year": 2021,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_GAST_001",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFor patients under 60 years with uninvestigated dyspepsia and no alarm features (weight loss, dysphagia, bleeding, anemia, persistent vomiting), the recommended initial strategy is non-invasive H. pylori test-and-treat. If H. pylori-negative, a 4-8 week trial of PPI therapy should follow. If PPI-unresponsive, consider functional dyspepsia and trial of low-dose tricyclic antidepressant (TCA) or prokinetic agent. Upper endoscopy (EGD) should be performed in patients with alarm features, age >= 60, or those unresponsive to initial therapies. Routine EGD is NOT recommended as the first step for uncomplicated dyspepsia in young patients.",
+    "domain": "gastroenterology",
+    "year": 2017,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_002",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nMeta-analyses demonstrate that H. pylori test-and-treat is more cost-effective than empiric PPI therapy or immediate endoscopy for uninvestigated dyspepsia. H. pylori eradication cures dyspepsia in approximately 10% of infected patients (NNT = 14). PPI therapy provides symptom relief in an additional 10-15% of patients. The functional dyspepsia prevalence is approximately 10-15% worldwide, and Rome IV criteria help standardize diagnosis.",
+    "domain": "gastroenterology",
+    "year": 2017,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_002",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults with dyspepsia (epigastric pain, postprandial fullness, early satiation) of at least 1 month duration. Alarm features warranting prompt endoscopy include: unintentional weight loss (>5%), dysphagia, persistent vomiting, GI bleeding, iron deficiency anemia, palpable abdominal mass, and family history of upper GI malignancy.",
+    "domain": "gastroenterology",
+    "year": 2017,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_002",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nPPIs should be prescribed at the lowest effective dose for the shortest appropriate duration. Long-term PPI use (>8 weeks) should be limited to patients with clear evidence-based indications: Barrett's esophagus, severe erosive esophagitis (LA Grade C or D), Zollinger-Ellison syndrome, or documented ulcer with ongoing NSAID/anticoagulant use. For patients without these indications, PPI deprescribing should be attempted via step-down (reducing dose by 50%) for 2-4 weeks followed by discontinuation, or by switching to as-needed H2 receptor antagonist therapy. Rebound acid hypersecretion may occur and typically resolves within 2-4 weeks.",
+    "domain": "gastroenterology",
+    "year": 2022,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_003",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nObservational studies associate long-term PPI use with small but statistically significant increases in risk of: C. difficile infection (1.5-2.7x), community-acquired pneumonia (1.3-1.5x), hip fracture (1.2-1.4x), chronic kidney disease (1.1-1.5x), hypomagnesemia, and vitamin B12 deficiency. However, the absolute risk increases are small, and confounding bias in observational data limits causal conclusions. The AGA 2017 Best Practice Advice emphasized that concern about these risks should not override clear indications for PPI therapy.",
+    "domain": "gastroenterology",
+    "year": 2022,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_003",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adult patients on long-term PPI therapy (>8 weeks) without clear indication for continuation. Patients with Barrett's esophagus or severe erosive esophagitis should NOT have PPIs discontinued. Deprescribing should be approached collaboratively with patients, and symptoms should be monitored after dose reduction.",
+    "domain": "gastroenterology",
+    "year": 2022,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_003",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nLifestyle modification targeting sustained weight loss of 7-10% body weight is the cornerstone treatment for NAFLD/MASH. Weight loss of 7% improves steatosis and ballooning; 10% improves fibrosis. Structured exercise programs (150-300 minutes/week of moderate-intensity aerobic activity) independently improve hepatic steatosis even without significant weight loss. Pharmacotherapy should be considered for patients with biopsy-confirmed MASH and significant fibrosis (stage >= F2) who do not achieve sufficient weight loss through lifestyle modification. Resmetirom (Rezdiffra), a thyroid hormone receptor-beta agonist, was FDA-approved in 2024 for MASH with moderate-to-advanced fibrosis (F2-F3).",
+    "domain": "gastroenterology",
+    "year": 2023,
+    "source_name": "AASLD",
+    "source_doc_id": "DOC_GAST_004",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nThe PIVENS trial showed pioglitazone improved histological NASH (43% vs 19% placebo) but with weight gain and edema side effects. Vitamin E (800 IU/day) improved NASH in non-diabetic patients (PIVENS trial). The MAESTRO-NASH trial demonstrated resmetirom achieved MASH resolution in 25.9% vs 9.7% placebo at 52 weeks. Semaglutide 2.4 mg weekly showed MASH resolution in 59% vs 17% placebo (phase 2). GLP-1 RAs improve NAFLD through weight loss and direct hepatic effects.",
+    "domain": "gastroenterology",
+    "year": 2023,
+    "source_name": "AASLD",
+    "source_doc_id": "DOC_GAST_004",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults with NAFLD/MASH. Screening for advanced fibrosis should use non-invasive methods: FIB-4 index (initial screen), followed by vibration-controlled transient elastography (VCTE/FibroScan) or ELF test if FIB-4 is indeterminate. Liver biopsy remains the gold standard for MASH diagnosis and fibrosis staging. Alcohol intake should be assessed and alcohol-associated liver disease excluded.",
+    "domain": "gastroenterology",
+    "year": 2023,
+    "source_name": "AASLD",
+    "source_doc_id": "DOC_GAST_004",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nThe USPSTF recommends screening for cervical cancer in women aged 21 to 65 years. For women aged 21-29, screening with cervical cytology (Pap smear) alone every 3 years is recommended. For women aged 30-65, screening with cytology alone every 3 years, hrHPV testing alone every 5 years, or co-testing (cytology + hrHPV) every 5 years are all acceptable strategies. Screening is NOT recommended for women under 21, regardless of age of sexual debut. Screening is NOT recommended for women over 65 with adequate prior screening and no high-risk features.",
+    "domain": "gastroenterology",
+    "year": 2018,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_GAST_005",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nModeling studies demonstrate that screening every 3 years with cytology or every 5 years with HPV testing provides optimal balance of cancer detection and minimization of colposcopy-related harms. Annual screening provides minimal additional benefit but substantially increases false-positive rates, unnecessary colposcopies, and overtreatment. Primary HPV testing detects more CIN3+ lesions than cytology alone (sensitivity 95% vs 55%) but with more false-positive results requiring follow-up.",
+    "domain": "gastroenterology",
+    "year": 2018,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_GAST_005",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to asymptomatic women with a cervix, including those vaccinated against HPV. Does not apply to women with prior cervical cancer, in-utero DES exposure, or immunocompromised status (HIV), who require more frequent screening. Post-hysterectomy with cervix removal and no history of CIN2+ does not require screening.",
+    "domain": "gastroenterology",
+    "year": 2018,
+    "source_name": "USPSTF",
+    "source_doc_id": "DOC_GAST_005",
+    "chunk_index": 2
+  },
+  {
+    "text": "Recommendations:\nFirst-line treatment for H. pylori should be guided by local antibiotic resistance patterns. In regions where clarithromycin resistance is below 15%, clarithromycin triple therapy (PPI + amoxicillin + clarithromycin for 14 days) remains acceptable. In regions where clarithromycin resistance exceeds 15% (most of the US), bismuth quadruple therapy (PPI + bismuth subsalicylate + metronidazole + tetracycline for 14 days) or concomitant therapy (PPI + amoxicillin + clarithromycin + metronidazole for 14 days) is recommended. Levofloxacin triple therapy is an alternative salvage regimen. Confirmation of eradication should be performed using urea breath test or stool antigen at least 4 weeks after completion of therapy.",
+    "domain": "gastroenterology",
+    "year": 2017,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_006",
+    "chunk_index": 0
+  },
+  {
+    "text": "Evidence Summary:\nGlobal clarithromycin resistance rates have increased from 5-10% in the 1990s to 20-30% in many regions, with US rates estimated at 16-25%. Clarithromycin resistance reduces triple therapy efficacy from 80-90% to 55-65%. Bismuth quadruple therapy maintains 85-90% eradication rates regardless of clarithromycin resistance. The 14-day treatment duration is superior to 7-10 day regimens.",
+    "domain": "gastroenterology",
+    "year": 2017,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_006",
+    "chunk_index": 1
+  },
+  {
+    "text": "Population/Applicability:\nApplies to adults and children with confirmed H. pylori infection requiring eradication (peptic ulcer disease, MALT lymphoma, functional dyspepsia, long-term NSAID/aspirin users, unexplained iron deficiency anemia, or ITP). Prior antibiotic exposure (particularly macrolides or fluoroquinolones) should guide regimen selection. Penicillin-allergic patients should avoid amoxicillin-containing regimens.",
+    "domain": "gastroenterology",
+    "year": 2017,
+    "source_name": "ACG",
+    "source_doc_id": "DOC_GAST_006",
+    "chunk_index": 2
+  }
+]

@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ML Artifacts (large files)
+*.pt
+!models/__init__.py
+
+# Data (large files)
+data/processed/
+
+# Monitoring logs
+monitoring/query_logs.jsonl
+
+# Environment
+.env
+.env.local
+
+# Experiment tracking
+wandb/
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Results (regenerated)
+results/figures/
+results/*.json
