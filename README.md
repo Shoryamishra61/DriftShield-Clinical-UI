@@ -10,192 +10,329 @@ app_file: app/gradio_app.py
 pinned: false
 ---
 
-# 🛡️ DriftShield: Medical Concept Drift Detection System via Retrieval-Augmented Hybrid Ensemble Classification
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python">
-  <img src="https://img.shields.io/badge/PyTorch-2.3-ee4c2c.svg" alt="PyTorch">
-  <img src="https://img.shields.io/badge/HuggingFace-Transformers-yellow.svg" alt="HuggingFace">
-  <img src="https://img.shields.io/badge/FAISS-CPU-green.svg" alt="FAISS">
-  <img src="https://img.shields.io/badge/FastAPI-0.111-009688.svg" alt="FastAPI">
-  <img src="https://img.shields.io/badge/Streamlit-MLOps-FF4B4B.svg" alt="Streamlit">
-  <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License">
-</p>
+# 🛡️ DriftShield
 
-> **A production-ready AI safety system that detects when clinical queries contain outdated medical premises — preventing temporally drifted information from reaching large language models in healthcare settings.**
+### Temporal Clinical Concept Drift Detection via Retrieval-Augmented Hybrid Ensemble Classification
+
+[![CI/CD Pipeline](https://github.com/Shoryamishra61/DriftShield-Clinical-UI/actions/workflows/ci.yml/badge.svg)](https://github.com/Shoryamishra61/DriftShield-Clinical-UI/actions)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)](https://python.org)
+[![PyTorch 2.3](https://img.shields.io/badge/PyTorch-2.3-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org)
+[![HuggingFace Transformers](https://img.shields.io/badge/🤗_Transformers-4.35+-FFD21E?style=flat)](https://huggingface.co/transformers)
+[![FAISS](https://img.shields.io/badge/FAISS-CPU-4285F4?style=flat&logo=meta&logoColor=white)](https://github.com/facebookresearch/faiss)
+[![W&B](https://img.shields.io/badge/Weights_%26_Biases-Tracked-FFBE00?style=flat&logo=weightsandbiases&logoColor=black)](https://wandb.ai)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
+
+**Shorya Mishra** · 2026
+
+[📄 Paper](results/arxiv_report.md) · [🎯 Clinical UI Demo](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-Clinical-UI) · [📊 MLOps Dashboard](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-MLOps-Telemetry) · [🔬 W&B Experiments](https://wandb.ai/driftshield)
+
+</div>
+
+---
+
+## Abstract
+
+Large Language Models (LLMs) deployed in clinical decision support systems are vulnerable to **temporal knowledge drift** — a systemic failure mode where static training cutoffs conflict with continuously evolving clinical practice guidelines. When patients or clinicians issue queries built on outdated medical beliefs, LLMs often validate incorrect premises, generating **clinically dangerous responses**.
+
+DriftShield introduces a novel **Retrieval-Augmented Hybrid Ensemble Classification** framework that detects outdated clinical premises *before* they reach downstream LLMs. The system combines (1) a fine-tuned BioBERT sequence classifier, (2) a zero-shot Qwen LLM judge with chain-of-thought reasoning, and (3) a multimodal CLIP fusion head — unified through a **safety-first max aggregation** ensemble strategy. Statistical drift monitoring via Kolmogorov-Smirnov tests and Population Stability Index provides automated retraining triggers.
+
+On the **ConflictMedQA-Extended** benchmark (8 clinical domains, 48 temporal concept pairs), DriftShield achieves **94.5% accuracy**, **0.938 F1 (macro)**, and **97.8% sensitivity** — a statistically significant improvement over keyword baselines (McNemar's p = 0.0012).
 
 ---
 
 ## Table of Contents
 
-- [Problem Statement](#problem-statement)
-- [System Architecture](#system-architecture)
-- [Key Features](#key-features)
-- [Technical Innovation](#technical-innovation)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Evaluation Results](#evaluation-results)
-- [MLOps Monitoring Dashboard](#mlops-monitoring-dashboard)
-- [Deployment](#deployment)
-- [Citation](#citation)
+- [Abstract](#abstract)
+- [1. Problem Formulation](#1-problem-formulation)
+- [2. System Architecture](#2-system-architecture)
+- [3. Methodology](#3-methodology)
+- [4. Dataset: ConflictMedQA-Extended](#4-dataset-conflictmedqa-extended)
+- [5. Experimental Results](#5-experimental-results)
+- [6. RAG Evaluation (RAGAS-Lite)](#6-rag-evaluation-ragas-lite)
+- [7. MLOps & Production Monitoring](#7-mlops--production-monitoring)
+- [8. Deployment Architecture](#8-deployment-architecture)
+- [9. Repository Structure](#9-repository-structure)
+- [10. Installation & Quick Start](#10-installation--quick-start)
+- [11. API Reference](#11-api-reference)
+- [12. CI/CD Pipeline](#12-cicd-pipeline)
+- [13. Experiment Tracking (W&B)](#13-experiment-tracking-wb)
+- [14. Related Repositories](#14-related-repositories)
+- [15. Citation](#15-citation)
+- [16. License & Acknowledgments](#16-license--acknowledgments)
 
 ---
 
-## Problem Statement
+## 1. Problem Formulation
 
-Large Language Models deployed in clinical settings are vulnerable to **temporal knowledge drift** — their static training cutoffs conflict with continuously evolving clinical guidelines. When patients or clinicians issue queries built on outdated medical beliefs (e.g., *"Should all adults over 50 take daily aspirin for heart prevention?"*), LLMs often validate the wrong premise, generating **clinically dangerous responses**.
+We formalize **temporal clinical premise drift detection** as a binary classification task. Given a patient query $q$ containing an implicit clinical premise $p$, a current guideline corpus $\mathcal{G}_t$, and an outdated guideline corpus $\mathcal{G}_{t-k}$, we define the drift indicator:
 
-DriftShield formalizes this as **temporal clinical premise drift detection**:
+$$\delta(p, \mathcal{G}_t) = \begin{cases} 1 & \text{if } p \text{ is consistent with } \mathcal{G}_{t-k} \text{ but contradicts } \mathcal{G}_t, \text{ for some } k > 0 \\ 0 & \text{otherwise} \end{cases}$$
 
-$$\delta(p, \mathcal{G}_{t}) = 1 \quad \text{if} \quad p \text{ is consistent with } \mathcal{G}_{t-k} \text{ but contradicts } \mathcal{G}_{t}, \text{ for some } k > 0$$
+Where the detection objective is to maximize sensitivity (recall of drifted premises) while maintaining acceptable specificity, formalized as:
 
-Where $p$ is the query premise, $\mathcal{G}_{t}$ is the current guideline corpus, and $\mathcal{G}_{t-k}$ is the outdated guideline.
+$$\max_{\theta} \; \text{Recall}_{\delta=1}(\theta) \quad \text{s.t.} \quad \text{Precision}(\theta) \geq \tau_{\min}$$
+
+This **safety-first** formulation prioritizes detecting outdated beliefs (minimizing false negatives) over minimizing false positives, reflecting the asymmetric cost structure in clinical NLP.
 
 ---
 
-## System Architecture
+## 2. System Architecture
 
 ```
-                     ┌─────────────────────────────────────────────┐
-                     │            DriftShield Pipeline              │
-                     └─────────────────────────────────────────────┘
-                                        │
-                     ┌──────────────────┼──────────────────┐
-                     │                  │                   │
-              ┌──────▼──────┐   ┌──────▼──────┐   ┌───────▼───────┐
-              │  BioBERT     │   │  Qwen LLM    │   │  Multimodal   │
-              │  Encoder +   │   │  Zero-Shot    │   │  CLIP Fusion  │
-              │  Classifier  │   │  CoT Judge    │   │  Head         │
-              └──────┬──────┘   └──────┬──────┘   └───────┬───────┘
-                     │                  │                   │
-                     └──────────────────┼───────────────────┘
-                                        │
-                          ┌─────────────▼─────────────┐
-                          │  Safety-First Max Ensemble │
-                          │  Score = max(BioBERT, Qwen)│
-                          └─────────────┬─────────────┘
-                                        │
-              ┌─────────────────────────┼─────────────────────────┐
-              │                         │                          │
-     ┌────────▼────────┐    ┌──────────▼──────────┐    ┌─────────▼─────────┐
-     │  FAISS Semantic  │    │  Statistical Drift   │    │  Production       │
-     │  Retriever       │    │  Tests (KS + PSI)    │    │  Telemetry Logger │
-     │  (BioBERT + IP)  │    │                      │    │  (JSONL)          │
-     └──────────────────┘    └──────────────────────┘    └───────────────────┘
+                         ┌─────────────────────────────────────────────────┐
+                         │              DriftShield Pipeline                │
+                         │         Retrieval-Augmented Ensemble            │
+                         └────────────────────┬────────────────────────────┘
+                                              │
+                    ┌─────────────────────────┼─────────────────────────┐
+                    │                         │                         │
+             ┌──────▼──────┐          ┌──────▼──────┐          ┌──────▼──────┐
+             │   BioBERT    │          │  Qwen 2.5   │          │  Multimodal  │
+             │  Fine-tuned  │          │  Zero-Shot   │          │  CLIP Fusion │
+             │  Classifier  │          │  CoT Judge   │          │    Head      │
+             │  (768-dim)   │          │  (7B params) │          │ (768+512→256)│
+             └──────┬──────┘          └──────┬──────┘          └──────┬──────┘
+                    │                         │                         │
+                    │    P(drift|q,c)         │   score ∈ [0,1]        │
+                    └─────────────────────────┼─────────────────────────┘
+                                              │
+                               ┌──────────────▼──────────────┐
+                               │   Safety-First Max Ensemble  │
+                               │   S = max(S_bio, S_qwen)     │
+                               │   verdict = S ≥ τ ? RISKY    │
+                               └──────────────┬──────────────┘
+                                              │
+                    ┌─────────────────────────┼─────────────────────────┐
+                    │                         │                         │
+           ┌────────▼────────┐    ┌──────────▼──────────┐    ┌────────▼────────┐
+           │  FAISS Semantic  │    │  Statistical Drift   │    │  W&B Experiment  │
+           │    Retriever     │    │  Tests (KS + PSI)    │    │    Tracking      │
+           │  (BioBERT + IP)  │    │  Retraining Triggers │    │  + Telemetry     │
+           └──────────────────┘    └─────────────────────┘    └─────────────────┘
 ```
 
 ---
 
-## Key Features
+## 3. Methodology
 
-### 1. Hybrid Ensemble Classification
-- **BioBERT Fine-tuned Classifier**: Domain-specific sequence classifier trained on the ConflictMedQA-Extended dataset across 8 medical domains
-- **Qwen Zero-Shot LLM Judge**: Chain-of-thought reasoning for temporal drift assessment via local Ollama inference
-- **Safety-First Max Aggregation**: Ensemble strategy that prioritizes patient safety by surfacing the most conservative risk signal
+### 3.1 Retrieval-Augmented Context Grounding
 
-### 2. Rigorous Statistical Testing
-- **Kolmogorov-Smirnov (KS) Test**: Two-sample test detecting distributional shifts in incoming query score patterns
-- **Population Stability Index (PSI)**: Structural bucket-level drift measurement with interpretable severity levels
-- **Automated Retraining Triggers**: Statistical guardrails (KS p < 0.05 or PSI ≥ 0.25) that trigger model retraining when drift is detected
+Clinical queries are embedded using **BioBERT** (`dmis-lab/biobert-base-cased-v1.1`) into 768-dimensional dense vectors. We construct a FAISS Inner Product index over L2-normalized guideline chunk embeddings, enabling sub-millisecond cosine similarity retrieval:
 
-### 3. Real-Time MLOps Monitoring Dashboard
-- **Streamlit-based telemetry dashboard** with live KPI cards, drift score trends, latency monitoring
-- **Interactive score distribution comparisons** (baseline vs. monitored traffic)
-- **Performance degradation simulation curves** showing F1 decay under concept drift
-- **Automated retraining loop simulation** with MLOps trigger console
+$$\text{sim}(q, c_i) = \frac{\mathbf{e}_q \cdot \mathbf{e}_{c_i}}{\|\mathbf{e}_q\| \cdot \|\mathbf{e}_{c_i}\|}$$
 
-### 4. Advanced RAG Evaluation (RAGAS-Lite)
-- **Faithfulness**: Assesses whether system explanations are grounded in retrieved guidelines
-- **Context Relevance**: Evaluates topical alignment of retrieved chunks with clinical queries
-- **Context Precision**: Measures retrieval ranking quality (relevant documents ranked higher)
-- **Qwen-as-Judge**: Uses the local LLM as an evaluation judge (zero-cost alternative to RAGAS)
+The top-$k$ ($k=5$) guideline chunks are retrieved and concatenated as classification context.
 
-### 5. Multimodal Drift Detection
-- **Cross-Attention Fusion Head**: PyTorch module projecting BioBERT (768-dim) and CLIP (512-dim) embeddings to a shared 256-dim space
-- **Multi-Head Attention fusion** for capturing cross-modal clinical patterns
-- **Extensible to real clinical imaging** (radiographs, pathology slides, dermatological images)
+### 3.2 Hybrid Ensemble Classification
 
-### 6. Semantic Retrieval
-- **BioBERT Embeddings**: Domain-specific medical language embeddings from `dmis-lab/biobert-base-cased-v1.1`
-- **FAISS Inner Product Index**: Cosine similarity search over L2-normalized vectors
-- **Section-Aware Chunking**: Clinical guidelines chunked at logical section boundaries (Recommendations, Evidence, Applicability)
+| Component | Architecture | Role |
+|:---|:---|:---|
+| **BioBERT Classifier** | `bert-base-cased` + 2-class head, fine-tuned on ConflictMedQA-Extended | Domain-specific sequence classification with [CLS] token pooling |
+| **Qwen Zero-Shot Judge** | `qwen2.5-coder:7b` via Ollama, chain-of-thought prompting | Reasoning-based temporal drift assessment with structured JSON output |
+| **Multimodal Fusion** | Cross-attention projection (BioBERT 768-d → 256-d, CLIP 512-d → 256-d) | Multi-head attention fusion for clinical imaging integration |
 
-### 7. Production-Ready API
-- **FastAPI REST endpoints**: Single prediction, batch prediction, multimodal prediction, health checks
-- **Async executor architecture**: CPU-bound model inference offloaded to thread pool
-- **CORS-enabled**: Ready for frontend integration
+**Safety-First Max Aggregation:**
+
+$$S_{\text{hybrid}} = \max(S_{\text{BioBERT}}, S_{\text{Qwen}})$$
+
+This ensemble strategy encodes the **precautionary principle** — if *either* classifier flags potential drift, the system alerts. This maximizes sensitivity at the cost of marginal specificity, appropriate for safety-critical clinical applications.
+
+### 3.3 Statistical Drift Monitoring
+
+Production drift is monitored via two complementary statistical tests:
+
+| Test | Statistic | Alert Threshold | Interpretation |
+|:---|:---|:---|:---|
+| **Kolmogorov-Smirnov** | $D_n = \sup_x |F_{\text{ref}}(x) - F_{\text{target}}(x)|$ | $p < 0.05$ | Detects any distributional shift in score patterns |
+| **Population Stability Index** | $\text{PSI} = \sum_i (p_i^{\text{target}} - p_i^{\text{ref}}) \ln\frac{p_i^{\text{target}}}{p_i^{\text{ref}}}$ | $\text{PSI} \geq 0.25$ | Measures structural bucket-level drift severity |
+
+Automated retraining is triggered when **either** condition fires: $\text{KS}_{p} < \alpha \lor \text{PSI} \geq \tau$.
 
 ---
 
-## Technical Innovation
+## 4. Dataset: ConflictMedQA-Extended
 
-| Component | Innovation | Traditional Approach |
-|---|---|---|
-| **Drift Detection** | Premise-level temporal drift via RAG-guided classification | Token-level hallucination detection on LLM outputs |
-| **Ensemble Design** | Safety-first max aggregation (encode + reason) | Single model, single modality |
-| **Statistical Rigor** | KS + PSI with automated retraining triggers | Periodic scheduled retraining (wasteful) |
-| **Evaluation** | RAGAS-Lite with local LLM judge (zero-cost) | External API-dependent evaluation |
-| **Dataset** | ConflictMedQA-Extended: 8 domains, 48 concept pairs, augmented | Generic medical QA without temporal context |
+A curated benchmark for temporal clinical premise drift detection:
+
+| Property | Value |
+|:---|:---|
+| **Clinical Domains** | Cardiology, Endocrinology, Oncology, Infectious Disease, Pulmonology, Psychiatry, Gastroenterology, Preventive Medicine |
+| **Concept Pairs** | 48 temporal conflict pairs (outdated ↔ current guideline) |
+| **Guideline Sources** | USPSTF, ACC/AHA, ADA, NCCN, IDSA, GOLD, APA, ACG |
+| **Total Samples** | Augmented across train/val/test splits |
+| **Guideline Corpus** | 36 clinical guideline documents with section-aware chunking |
+| **Labels** | Binary: `RISKY` (contains outdated premise) / `SAFE` (current consensus) |
 
 ---
 
-## Project Structure
+## 5. Experimental Results
+
+### 5.1 Comparative Model Performance
+
+| Model Configuration | Accuracy | F1 (Macro) | Sensitivity | Specificity | AUC-ROC | MCC |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Keyword Baseline | 73.5% | 0.721 | 78.2% | 66.1% | 0.743 | 0.452 |
+| BioBERT (Fine-tuned) | 88.2% | 0.875 | 91.2% | 83.5% | 0.901 | 0.762 |
+| Qwen 2.5 (Zero-shot) | 89.5% | 0.891 | 93.2% | 81.2% | 0.918 | 0.795 |
+| **Hybrid Ensemble** | **94.5%** | **0.938** | **97.8%** | **88.5%** | **0.961** | **0.881** |
+
+### 5.2 Statistical Significance
+
+| Test | Comparison | Statistic | p-value | Significant |
+|:---|:---|:---|:---|:---|
+| McNemar's χ² | Baseline vs. Hybrid | χ² = 10.56 | 0.0012 | ✅ Yes (p < 0.05) |
+| Bootstrap 95% CI | BioBERT F1 | — | [0.835, 0.915] | — |
+
+### 5.3 Technical Innovation Summary
+
+| Component | DriftShield Innovation | Traditional Approach |
+|:---|:---|:---|
+| Drift Detection | Premise-level temporal drift via RAG-guided classification | Token-level hallucination detection on LLM outputs |
+| Ensemble Design | Safety-first max aggregation (encode + reason) | Single model, single modality |
+| Statistical Rigor | KS + PSI with automated retraining triggers | Periodic scheduled retraining (wasteful) |
+| Evaluation | RAGAS-Lite with local LLM judge (zero-cost) | External API-dependent evaluation (GPT-4) |
+| Dataset | ConflictMedQA-Extended: 8 domains, 48 temporal concept pairs | Generic medical QA without temporal context |
+
+---
+
+## 6. RAG Evaluation (RAGAS-Lite)
+
+We evaluate retrieval-augmented generation quality using a zero-cost local LLM judge framework:
+
+| Metric | Definition | Score |
+|:---|:---|:---:|
+| **Faithfulness** | Proportion of system explanations grounded in retrieved guidelines | 0.925 |
+| **Context Relevance** | Topical alignment of retrieved chunks with clinical queries | 0.884 |
+| **Context Precision** | Retrieval ranking quality (relevant documents ranked higher) | 0.912 |
+| **Joint RAG Score** | Harmonic mean of all three metrics | **0.907** |
+
+> **Note:** Evaluation uses Qwen-as-Judge — a zero-cost alternative to the standard RAGAS framework which requires external API calls to GPT-4.
+
+---
+
+## 7. MLOps & Production Monitoring
+
+### 7.1 Streamlit Telemetry Dashboard
+
+The production monitoring system provides real-time observability:
+
+- **KPI Cards**: Total queries, mean latency, KS p-value, PSI score
+- **Drift Score Trends**: BioBERT vs. Qwen vs. Hybrid scores (hourly aggregation)
+- **Score Distribution Comparison**: Baseline vs. monitored traffic (probability-normalized histograms)
+- **Performance Degradation Curves**: F1 decay simulation under increasing drift density
+- **Automated Retraining Console**: Trigger logs with statistical justification
+
+> 🔗 **Live Dashboard**: [DriftShield MLOps Telemetry](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-MLOps-Telemetry)
+
+### 7.2 Production Query Telemetry
+
+All inference queries are logged to a thread-safe JSONL telemetry file with:
+- Timestamp, query text, BioBERT/Qwen/Hybrid scores
+- Verdict, confidence, latency, retrieved source metadata
+- Modality indicators (text-only vs. multimodal)
+
+High-severity drift alerts (`verdict == RISKY`) are additionally streamed to **Weights & Biases** for real-time observability.
+
+---
+
+## 8. Deployment Architecture
+
+### 8.1 Live Deployments
+
+| Service | Platform | SDK | URL |
+|:---|:---|:---|:---|
+| **Clinical UI** | HuggingFace Spaces | Gradio 4.36 | [DriftShield-Clinical-UI](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-Clinical-UI) |
+| **MLOps Dashboard** | HuggingFace Spaces | Streamlit | [DriftShield-MLOps-Telemetry](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-MLOps-Telemetry) |
+| **REST API** | Docker / Local | FastAPI + Uvicorn | `localhost:8000` |
+
+### 8.2 Docker Deployment
+
+```bash
+docker build -t driftshield .
+docker run -p 8000:8000 driftshield
+```
+
+### 8.3 CI/CD Pipeline
+
+Automated testing and deployment via **GitHub Actions**:
+
+```
+Push to main → Lint (flake8) → Unit Tests (pytest) → Build Verification → Deploy to HF Spaces
+```
+
+See [`.github/workflows/ci.yml`](.github/workflows/ci.yml) for the full pipeline specification.
+
+---
+
+## 9. Repository Structure
 
 ```
 DriftShield/
-├── api/                          # FastAPI REST backend
-│   ├── main.py                   # Endpoint definitions
-│   └── schemas.py                # Pydantic request/response models
+├── .github/
+│   └── workflows/
+│       └── ci.yml                    # CI/CD pipeline (lint, test, deploy)
+├── api/                              # FastAPI REST backend
+│   ├── main.py                       # Endpoint definitions (predict, batch, multimodal, health)
+│   └── schemas.py                    # Pydantic request/response models
 ├── app/
-│   └── gradio_app.py             # Gradio interactive UI
+│   └── gradio_app.py                 # Gradio interactive clinical UI
 ├── data/
-│   ├── generate_synthetic_data.py # Data generation (Qwen/offline)
-│   ├── build_dataset.py          # Augmented dataset builder
-│   ├── raw_guidelines.json       # 48 concept pairs (8 domains)
-│   └── guideline_corpus.json     # 36 clinical guideline documents
+│   ├── generate_synthetic_data.py    # Qwen-based data generation
+│   ├── build_dataset.py              # Augmented dataset builder with stratified splits
+│   ├── raw_guidelines.json           # 48 temporal concept pairs (8 clinical domains)
+│   └── guideline_corpus.json         # 36 clinical guideline documents
 ├── evaluation/
-│   ├── drift_tests.py            # KS Test + PSI implementation
-│   ├── metrics.py                # Classification + Bootstrap CIs
-│   ├── rag_eval.py               # RAGAS-Lite evaluation engine
-│   ├── run_evaluation.py         # Full benchmark runner
-│   ├── baseline.py               # Keyword baseline comparator
-│   └── visualize.py              # Matplotlib/Seaborn report generator
+│   ├── drift_tests.py                # KS Test + PSI statistical drift detection
+│   ├── metrics.py                    # Classification metrics + bootstrap confidence intervals
+│   ├── rag_eval.py                   # RAGAS-Lite evaluation engine (Qwen-as-Judge)
+│   ├── run_evaluation.py             # Full comparative benchmark runner + W&B logging
+│   ├── baseline.py                   # Keyword baseline comparator
+│   └── visualize.py                  # Matplotlib/Seaborn report generator
 ├── models/
-│   ├── classifier.py             # BioBERT drift classifier
-│   ├── multimodal.py             # Cross-attention CLIP fusion head
-│   └── train.py                  # HuggingFace Trainer + W&B
+│   ├── classifier.py                 # BioBERT drift classifier (predict, batch, save/load)
+│   ├── multimodal.py                 # Cross-attention CLIP fusion head (PyTorch)
+│   └── train.py                      # HuggingFace Trainer + W&B experiment tracking
 ├── monitoring/
-│   ├── dashboard.py              # Streamlit MLOps dashboard
-│   └── query_logger.py           # Thread-safe JSONL telemetry
+│   ├── dashboard.py                  # Streamlit MLOps telemetry dashboard
+│   └── query_logger.py               # Thread-safe JSONL logger + W&B drift alerts
 ├── rag/
-│   ├── pipeline.py               # End-to-end hybrid inference
-│   ├── retriever.py              # FAISS vector search
-│   ├── embedder.py               # BioBERT embedding engine
-│   ├── chunker.py                # Section-aware text chunker
-│   └── build_index.py            # FAISS index builder
+│   ├── pipeline.py                   # End-to-end hybrid inference pipeline
+│   ├── retriever.py                  # FAISS inner product vector search
+│   ├── embedder.py                   # BioBERT CLS-token embedding engine
+│   ├── chunker.py                    # Section-aware clinical text chunker
+│   └── build_index.py                # FAISS index builder
 ├── results/
-│   ├── generate_arxiv_report.py  # Academic report generator
-│   └── arxiv_report.md           # Publication-ready paper
+│   ├── generate_arxiv_report.py      # Academic report generator
+│   └── arxiv_report.md               # Publication-ready paper
 ├── tests/
-│   ├── test_classifier.py        # Unit tests
-│   ├── test_retriever.py
-│   └── test_api.py
-├── sprint_orchestrator.py        # Automated pipeline executor
-├── requirements.txt              # Python dependencies
-├── Dockerfile                    # Container deployment
-├── Makefile                      # Build commands
-└── README.md                     # This file
+│   ├── test_classifier.py            # BioBERT classifier unit tests
+│   ├── test_retriever.py             # FAISS retriever unit tests
+│   ├── test_api.py                   # FastAPI endpoint tests
+│   ├── test_drift_tests.py           # Statistical drift test validation
+│   └── test_multimodal.py            # Multimodal fusion head tests
+├── checkpoints/                      # Trained model weights (LFS)
+├── Dockerfile                        # Container deployment specification
+├── Makefile                          # Build automation targets
+├── requirements.txt                  # Python dependency manifest
+├── sprint_orchestrator.py            # Automated pipeline executor
+└── README.md                         # This document
 ```
 
 ---
 
-## Installation
+## 10. Installation & Quick Start
 
 ### Prerequisites
-- Python 3.10+
-- pip
-- (Optional) [Ollama](https://ollama.ai) with `qwen2.5-coder:7b` for LLM judge features
+
+| Requirement | Version | Purpose |
+|:---|:---|:---|
+| Python | ≥ 3.10 | Runtime |
+| pip | Latest | Package management |
+| Git LFS | Latest | Large file storage (model weights, FAISS index) |
+| Ollama *(optional)* | Latest | Local Qwen inference for LLM judge |
 
 ### Setup
 
@@ -204,151 +341,70 @@ DriftShield/
 git clone https://github.com/Shoryamishra61/DriftShield-Clinical-UI.git
 cd DriftShield-Clinical-UI
 
-# Create and activate virtual environment
+# Install Git LFS and pull large files
+git lfs install && git lfs pull
+
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# (Optional) Install Ollama and pull Qwen model
-# ollama pull qwen2.5-coder:7b
+# Configure environment variables
+cp .env.example .env
+# Edit .env with your WANDB_API_KEY and HF_TOKEN
 ```
 
----
-
-## Quick Start
-
-### 1. Build Dataset and Index
+### Pipeline Execution
 
 ```bash
-# Generate augmented training/validation/test splits
+# Step 1: Build augmented dataset splits
 python data/build_dataset.py
 
-# Build FAISS semantic search index
-python -c "import sys; sys.path.insert(0, '.'); from rag.build_index import build_faiss_index; build_faiss_index()"
-```
+# Step 2: Build FAISS semantic search index
+python rag/build_index.py
 
-### 2. Train the BioBERT Classifier
-
-```bash
+# Step 3: Train BioBERT classifier (with W&B tracking)
 python models/train.py
-```
 
-### 3. Run Full Evaluation
-
-```bash
+# Step 4: Run full comparative evaluation
 python evaluation/run_evaluation.py
-```
 
-### 4. Launch the API Server
+# Step 5: Launch the Clinical UI
+python app/gradio_app.py
 
-```bash
-uvicorn api.main:app --host 0.0.0.0 --port 8000
-```
-
-### 5. Launch the Monitoring Dashboard
-
-```bash
+# Step 6: Launch the MLOps Dashboard
 streamlit run monitoring/dashboard.py
-```
 
-### 6. Run the Complete Pipeline
-
-```bash
+# Or run the complete pipeline
 python sprint_orchestrator.py
 ```
 
 ---
 
-## Evaluation Results
+## 11. API Reference
 
-### Comparative Model Performance
-
-| Model Configuration | Accuracy | F1 (Macro) | Sensitivity | Specificity | AUC-ROC | MCC |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| Keyword Baseline | 73.5% | 0.721 | 78.2% | 66.1% | 0.743 | 0.452 |
-| BioBERT (Fine-tuned) | 88.2% | 0.875 | 91.2% | 83.5% | 0.901 | 0.762 |
-| Qwen (Zero-shot) | 89.5% | 0.891 | 93.2% | 81.2% | 0.918 | 0.795 |
-| **Hybrid Ensemble** | **94.5%** | **0.938** | **97.8%** | **88.5%** | **0.961** | **0.881** |
-
-### Statistical Significance
-- **McNemar's Test** (Baseline vs Hybrid): p = 0.0012 (p < 0.05, statistically significant)
-- **Bootstrap 95% CI** for BioBERT F1: [0.835, 0.915]
-
-### RAG Evaluation (RAGAS-Lite)
-| Metric | Score |
-|:---|:---:|
-| Faithfulness (Groundedness) | 0.925 |
-| Context Relevance | 0.884 |
-| Context Precision | 0.912 |
-| Joint RAG Score | 0.907 |
-
----
-
-## MLOps Monitoring Dashboard
-
-The Streamlit dashboard provides real-time concept drift monitoring:
-
-- **KPI Cards**: Total queries, average latency, KS p-value, PSI score
-- **Drift Score Trends**: BioBERT vs Qwen vs Hybrid scores over time
-- **Score Distribution Comparison**: Baseline vs monitored traffic histograms
-- **Performance Degradation Curve**: F1 decay simulation under increasing drift
-- **Automated Retraining Console**: Trigger logs with statistical justification
-
-```bash
-streamlit run monitoring/dashboard.py
-```
-
----
-
-## Deployment
-
-### Docker
-
-```bash
-docker build -t driftshield .
-docker run -p 8000:8000 -p 8501:8501 driftshield
-```
-
-### HuggingFace Spaces
-
-The Gradio Clinical UI is live at: [https://huggingface.co/spaces/ShoryaMishra61/DriftShield-Clinical-UI](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-Clinical-UI)
-
-The Streamlit MLOps Dashboard is live at: [https://huggingface.co/spaces/ShoryaMishra61/DriftShield-MLOps-Telemetry](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-MLOps-Telemetry)
-
-### Weights & Biases Experiment Tracking
-
-DriftShield uses [Weights & Biases](https://wandb.ai/) for:
-- **Training**: Real-time loss curves, learning rate schedules, and per-epoch metrics (F1, accuracy, sensitivity, specificity)
-- **Evaluation**: Comparative model performance tables, confusion matrices, ROC curves logged as W&B artifacts
-- **Production Monitoring**: Drift alert telemetry (RISKY verdicts) streamed to W&B for real-time observability
-
-Set your API key in `.env`:
-```bash
-WANDB_API_KEY=your_key_here
-```
-
----
-
-## API Endpoints
+### Endpoints
 
 | Endpoint | Method | Description |
-|---|---|---|
-| `/v1/predict` | POST | Single clinical query drift classification |
-| `/v1/predict_multimodal` | POST | Multimodal (text + image) drift classification |
-| `/v1/batch_predict` | POST | Batch classification for multiple queries |
-| `/v1/health` | GET | System health check |
+|:---|:---|:---|
+| `/v1/predict` | `POST` | Single clinical query drift classification |
+| `/v1/predict_multimodal` | `POST` | Multimodal (text + image) drift classification |
+| `/v1/batch_predict` | `POST` | Batch classification for multiple queries |
+| `/v1/health` | `GET` | System health check (model + index status) |
 
-### Example Request
+### Example
 
 ```bash
+# Start the API server
+uvicorn api.main:app --host 0.0.0.0 --port 8000
+
+# Query the API
 curl -X POST http://localhost:8000/v1/predict \
   -H "Content-Type: application/json" \
   -d '{"question": "My doctor recommended daily aspirin for heart prevention since I am over 50."}'
 ```
-
-### Example Response
 
 ```json
 {
@@ -356,7 +412,7 @@ curl -X POST http://localhost:8000/v1/predict \
   "verdict": "RISKY",
   "confidence": 0.74,
   "semantic_shift": "**Conflict Detected with USPSTF (2022)**: The USPSTF 2022 recommendation no longer supports universal aspirin use for adults over 50...",
-  "retrieved_guidelines": [...],
+  "retrieved_guidelines": ["..."],
   "threshold_used": 0.50,
   "processing_time_ms": 142.3
 }
@@ -364,28 +420,89 @@ curl -X POST http://localhost:8000/v1/predict \
 
 ---
 
-## Citation
+## 12. CI/CD Pipeline
+
+Automated quality assurance via GitHub Actions on every push and pull request:
+
+| Stage | Tool | Checks |
+|:---|:---|:---|
+| **Lint** | `flake8` | PEP 8 compliance, syntax errors, import validation |
+| **Test** | `pytest` | Unit tests across classifier, retriever, API, drift tests, multimodal |
+| **Build** | Python 3.10 | Dependency resolution, import verification |
+
+The pipeline runs on `ubuntu-latest` with Python 3.10. See [`.github/workflows/ci.yml`](.github/workflows/ci.yml) for the specification.
+
+---
+
+## 13. Experiment Tracking (W&B)
+
+DriftShield uses **Weights & Biases** for comprehensive experiment lifecycle management:
+
+| Phase | Tracked Metrics | Artifacts |
+|:---|:---|:---|
+| **Training** | Per-epoch loss, F1, accuracy, precision, recall, sensitivity, specificity | `test-results` artifact (JSON) |
+| **Evaluation** | 4-model comparison table (Baseline / BioBERT / Qwen / Hybrid), McNemar's p-value, RAG scores | `evaluation-results` artifact (5 JSON files) |
+| **Production** | Real-time RISKY drift alerts with hybrid/BioBERT/Qwen scores + latency | Streamed to W&B run |
+
+```bash
+# Configure W&B (add to .env)
+WANDB_API_KEY=your_api_key_here
+```
+
+All experiment runs are logged to the `driftshield` W&B project with automatic hyperparameter, metric, and artifact versioning.
+
+---
+
+## 14. Related Repositories
+
+This project is organized across two repositories for separation of concerns:
+
+| Repository | Purpose | Live Deployment |
+|:---|:---|:---|
+| [**DriftShield-Clinical-UI**](https://github.com/Shoryamishra61/DriftShield-Clinical-UI) | Primary research codebase + Gradio clinical interface | [HF Space (Gradio)](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-Clinical-UI) |
+| [**DriftShield-MLOps-Telemetry**](https://github.com/Shoryamishra61/DriftShield-MLOps-Telemetry) | MLOps monitoring dashboard + drift telemetry visualization | [HF Space (Streamlit)](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-MLOps-Telemetry) |
+
+Both repositories share the same codebase. The Clinical-UI repository serves as the primary development target, while the MLOps-Telemetry repository is configured for Streamlit-based dashboard deployment.
+
+---
+
+## 15. Citation
+
+If you use DriftShield in your research, please cite:
 
 ```bibtex
 @article{mishra2026driftshield,
-  title={DriftShield: Detecting Outdated Clinical Beliefs in Medical LLM Inputs via BioBERT and FAISS Retrieval-Augmented Drift Classification},
-  author={Mishra, Shorya},
-  journal={arXiv preprint},
-  year={2026}
+  title     = {DriftShield: Detecting Outdated Clinical Beliefs in Medical LLM
+               Inputs via BioBERT and FAISS Retrieval-Augmented Drift Classification},
+  author    = {Mishra, Shorya},
+  journal   = {arXiv preprint},
+  year      = {2026},
+  url       = {https://github.com/Shoryamishra61/DriftShield-Clinical-UI}
 }
 ```
 
 ---
 
-## License
+## 16. License & Acknowledgments
 
-This project is licensed under the MIT License. See `LICENSE` for details.
+This project is released under the [MIT License](LICENSE).
+
+### Acknowledgments
+
+| Resource | Attribution |
+|:---|:---|
+| [BioBERT](https://github.com/dmis-lab/biobert) | DMIS Lab, Korea University — domain-specific biomedical language model |
+| [FAISS](https://github.com/facebookresearch/faiss) | Meta AI Research — efficient similarity search and clustering |
+| [HuggingFace Transformers](https://huggingface.co/transformers/) | HuggingFace — transformer model hub and training utilities |
+| [Weights & Biases](https://wandb.ai/) | W&B — experiment tracking and MLOps platform |
+| Clinical Guidelines | USPSTF, ACC/AHA, ADA, NCCN, IDSA, GOLD, APA, ACG |
 
 ---
 
-## Acknowledgments
+<div align="center">
 
-- [BioBERT](https://github.com/dmis-lab/biobert) by DMIS Lab, Korea University
-- [FAISS](https://github.com/facebookresearch/faiss) by Meta AI Research
-- [HuggingFace Transformers](https://huggingface.co/transformers/) by HuggingFace
-- Clinical guideline sources: USPSTF, ACC/AHA, ADA, NCCN, IDSA, GOLD, APA, ACG
+*Built with clinical safety as a first principle.*
+
+**[⬆ Back to Top](#-driftshield)**
+
+</div>
