@@ -11,6 +11,10 @@ import sys
 import os
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Fix for OpenMP/FAISS duplicate library crashes on Windows
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
@@ -160,7 +164,7 @@ with gr.Blocks(
     **How it works:** DriftShield embeds clinical queries via BioBERT, retrieves the top 5 current guidelines from FAISS,
     performs zero-shot inference using Qwen, and aggregates their scores. Image uploads simulate multimodal CLIP projection.
     
-    [GitHub](https://github.com/Shoryamishra61/driftshield) | [Paper](#) | [W&B Dashboard](#)
+    [GitHub](https://github.com/Shoryamishra61/DriftShield-Clinical-UI) | [Paper](#) | [W&B Dashboard](https://wandb.ai/driftshield)
     """)
 
     submit_btn.click(
@@ -170,5 +174,5 @@ with gr.Blocks(
     )
 
 if __name__ == "__main__":
-    demo.launch(server_name="127.0.0.1", server_port=7860, share=False)
+    demo.launch(server_name="0.0.0.0", server_port=7860, share=False)
 

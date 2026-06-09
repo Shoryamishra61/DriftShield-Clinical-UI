@@ -201,8 +201,8 @@ DriftShield/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/DriftShield.git
-cd DriftShield
+git clone https://github.com/Shoryamishra61/DriftShield-Clinical-UI.git
+cd DriftShield-Clinical-UI
 
 # Create and activate virtual environment
 python -m venv venv
@@ -313,10 +313,21 @@ docker run -p 8000:8000 -p 8501:8501 driftshield
 
 ### HuggingFace Spaces
 
-1. Create a new Space on [HuggingFace Spaces](https://huggingface.co/spaces)
-2. Select **Streamlit** as the SDK
-3. Upload the repository contents
-4. The dashboard will be publicly accessible at `https://huggingface.co/spaces/yourusername/DriftShield`
+The Gradio Clinical UI is live at: [https://huggingface.co/spaces/ShoryaMishra61/DriftShield-Clinical-UI](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-Clinical-UI)
+
+The Streamlit MLOps Dashboard is live at: [https://huggingface.co/spaces/ShoryaMishra61/DriftShield-MLOps-Telemetry](https://huggingface.co/spaces/ShoryaMishra61/DriftShield-MLOps-Telemetry)
+
+### Weights & Biases Experiment Tracking
+
+DriftShield uses [Weights & Biases](https://wandb.ai/) for:
+- **Training**: Real-time loss curves, learning rate schedules, and per-epoch metrics (F1, accuracy, sensitivity, specificity)
+- **Evaluation**: Comparative model performance tables, confusion matrices, ROC curves logged as W&B artifacts
+- **Production Monitoring**: Drift alert telemetry (RISKY verdicts) streamed to W&B for real-time observability
+
+Set your API key in `.env`:
+```bash
+WANDB_API_KEY=your_key_here
+```
 
 ---
 

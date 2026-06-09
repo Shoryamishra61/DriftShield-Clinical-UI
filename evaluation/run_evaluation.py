@@ -4,12 +4,20 @@ DriftShield Evaluation Runner.
 Runs the proposed hybrid pipeline, keyword baseline, standalone BioBERT,
 and standalone Qwen models on the test split, computes comprehensive metrics,
 conducts McNemar's statistical tests, and calculates RAG evaluation scores.
+Logs all results to Weights & Biases for experiment tracking.
 """
 
+import os
 import json
 import numpy as np
 from pathlib import Path
 from typing import List, Dict, Any
+from dotenv import load_dotenv
+
+# Load environment variables (.env) so WANDB_API_KEY is available
+load_dotenv()
+
+import wandb
 from models.classifier import DriftShieldClassifier
 from rag.pipeline import DriftShieldPipeline
 from rag.retriever import FAISSRetriever
@@ -149,6 +157,63 @@ def run_full_evaluation(
     print(f"McNemar p-value (Baseline vs Hybrid): {mcnemar_result['p_value']:.4f} (Significant: {mcnemar_result['significant']})")
     print(f"RAG Evaluation: Faithfulness: {avg_faithfulness:.3f} | Context Relevance: {avg_relevance:.3f} | Context Precision: {avg_precision:.3f}")
 
+    # ── Weights & Biases Experiment Tracking ──
+    wandb_enabled = os.environ.get("WANDB_API_KEY") and os.environ.get("WANDB_MODE") != "disabled"
+    if wandb_enabled:
+        try:
+            wandb.init(project="driftshield", name="comparative-evaluation", job_type="evaluation")
+
+            # Log scalar metrics for each model
+            wandb.log({
+                "baseline/f1": baseline_metrics.f1_macro,
+                "baseline/sensitivity": baseline_metrics.sensitivity,
+                "baseline/specificity": baseline_metrics.specificity,
+                "baseline/auc_roc": baseline_metrics.auc_roc,
+                "biobert/f1": biobert_metrics.f1_macro,
+                "biobert/sensitivity": biobert_metrics.sensitivity,
+                "biobert/specificity": biobert_metrics.specificity,
+                "biobert/auc_roc": biobert_metrics.auc_roc,
+                "qwen/f1": qwen_metrics.f1_macro,
+                "qwen/sensitivity": qwen_metrics.sensitivity,
+                "qwen/specificity": qwen_metrics.specificity,
+                "qwen/auc_roc": qwen_metrics.auc_roc,
+                "hybrid/f1": hybrid_metrics.f1_macro,
+                "hybrid/sensitivity": hybrid_metrics.sensitivity,
+                "hybrid/specificity": hybrid_metrics.specificity,
+                "hybrid/auc_roc": hybrid_metrics.auc_roc,
+                "hybrid/mcnemar_p_value": mcnemar_result["p_value"],
+                "rag/faithfulness": avg_faithfulness,
+                "rag/context_relevance": avg_relevance,
+                "rag/context_precision": avg_precision,
+                "rag/joint_score": avg_joint,
+            })
+
+            # Log model comparison as a W&B Table
+            comparison_table = wandb.Table(
+                columns=["Model", "F1 (Macro)", "Sensitivity", "Specificity", "AUC-ROC"],
+                data=[
+                    ["Keyword Baseline", baseline_metrics.f1_macro, baseline_metrics.sensitivity, baseline_metrics.specificity, baseline_metrics.auc_roc],
+                    ["BioBERT (Fine-tuned)", biobert_metrics.f1_macro, biobert_metrics.sensitivity, biobert_metrics.specificity, biobert_metrics.auc_roc],
+                    ["Qwen (Zero-shot)", qwen_metrics.f1_macro, qwen_metrics.sensitivity, qwen_metrics.specificity, qwen_metrics.auc_roc],
+                    ["Hybrid Ensemble", hybrid_metrics.f1_macro, hybrid_metrics.sensitivity, hybrid_metrics.specificity, hybrid_metrics.auc_roc],
+                ]
+            )
+            wandb.log({"model_comparison": comparison_table})
+
+            # Log evaluation results as artifacts
+            eval_artifact = wandb.Artifact("evaluation-results", type="evaluation")
+            for f in ["model_metrics.json", "baseline_metrics.json", "biobert_metrics.json", "qwen_metrics.json", "rag_metrics.json"]:
+                fpath = results_dir / f
+                if fpath.exists():
+                    eval_artifact.add_file(str(fpath))
+            wandb.log_artifact(eval_artifact)
+
+            wandb.finish()
+            print("W&B evaluation logging completed successfully.")
+        except Exception as e:
+            print(f"W&B logging skipped (non-critical): {e}")
+    else:
+        print("W&B logging disabled (no WANDB_API_KEY found).")
+
 if __name__ == "__main__":
     run_full_evaluation()
-

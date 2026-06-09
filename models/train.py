@@ -5,8 +5,13 @@ Finetunes BioBERT for sequence classification with evaluation, checkpointing, an
 """
 
 import json
+import os
 import numpy as np
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables (.env) so WANDB_API_KEY is available
+load_dotenv()
 from dataclasses import dataclass
 from typing import Dict, Any, Union, Optional
 import torch
@@ -124,7 +129,6 @@ def train(config: TrainConfig) -> None:
     Args:
         config: TrainConfig instance holding model and hyperparameter values.
     """
-    import os
     if not os.environ.get("WANDB_API_KEY"):
         os.environ["WANDB_MODE"] = "disabled"
 
@@ -183,6 +187,13 @@ def train(config: TrainConfig) -> None:
     test_results = trainer.evaluate(dataset["test"])
     with open(Path(config.output_dir) / "test_results.json", "w", encoding="utf-8") as f:
         json.dump(test_results, f, indent=2)
+
+    # Log test results to W&B as a summary table
+    if os.environ.get("WANDB_MODE") != "disabled":
+        wandb.log({"test/" + k: v for k, v in test_results.items()})
+        artifact = wandb.Artifact("test-results", type="evaluation")
+        artifact.add_file(str(Path(config.output_dir) / "test_results.json"))
+        wandb.log_artifact(artifact)
 
     print(f"Test Results: {test_results}")
     wandb.finish()

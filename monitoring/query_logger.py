@@ -15,6 +15,12 @@ from pathlib import Path
 from threading import Lock
 from typing import Dict, Any, List, Optional
 
+try:
+    import wandb
+    _WANDB_AVAILABLE = True
+except ImportError:
+    _WANDB_AVAILABLE = False
+
 logger = logging.getLogger("query_logger")
 
 class ProductionQueryLogger:
@@ -103,7 +109,20 @@ class ProductionQueryLogger:
                     f.write(json.dumps(record) + "\n")
             except Exception as e:
                 logger.error(f"Failed to write query telemetry record: {e}")
-                
+
+        # Log drift alerts to W&B when detected (non-blocking)
+        if _WANDB_AVAILABLE and os.environ.get("WANDB_API_KEY") and verdict == "RISKY":
+            try:
+                if wandb.run is not None:
+                    wandb.log({
+                        "drift_alert/hybrid_score": float(hybrid_score),
+                        "drift_alert/biobert_score": float(biobert_score),
+                        "drift_alert/qwen_score": float(qwen_score),
+                        "drift_alert/latency_ms": float(latency_ms),
+                    })
+            except Exception:
+                pass  # W&B logging is non-critical
+
         return record
 
     def read_logs(self, limit: Optional[int] = None) -> List[Dict[str, Any]]:
